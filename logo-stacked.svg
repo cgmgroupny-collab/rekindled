@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" fill="none">
+  <!-- Rekindled - Stacked Logo -->
+  <!-- Decorative flower/flame mark -->
+  <g transform="translate(78, 0)">
+    <circle cx="22" cy="22" r="4" fill="#C4935A"/>
+    <ellipse cx="22" cy="9" rx="3" ry="8" fill="#8B3A4A" transform="rotate(0, 22, 22)"/>
+    <ellipse cx="22" cy="9" rx="3" ry="8" fill="#8B3A4A" transform="rotate(60, 22, 22)"/>
+    <ellipse cx="22" cy="9" rx="3" ry="8" fill="#8B3A4A" transform="rotate(120, 22, 22)"/>
+    <ellipse cx="22" cy="9" rx="3" ry="8" fill="#8B3A4A" transform="rotate(180, 22, 22)"/>
+    <ellipse cx="22" cy="9" rx="3" ry="8" fill="#8B3A4A" transform="rotate(240, 22, 22)"/>
+    <ellipse cx="22" cy="9" rx="3" ry="8" fill="#8B3A4A" transform="rotate(300, 22, 22)"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="100" y="75" text-anchor="middle" font-family="'Cormorant Garamond', 'Times New Roman', Georgia, serif" font-size="36" font-weight="500" fill="#8B3A4A" letter-spacing="-0.5">Rekindled</text>
+  <!-- Tagline -->
+  <text x="100" y="100" text-anchor="middle" font-family="'DM Sans', system-ui, sans-serif" font-size="8" font-weight="600" fill="#C4935A" letter-spacing="4" text-transform="uppercase">SABIDUR&#205;A PARA LA SEGUNDA MITAD</text>
+</svg>
