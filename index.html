@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rekindled &mdash; Relationship Wisdom for the Second Half of Life</title>
-<meta name="description" content="Rediscover play, deepen love, and do the inner work that keeps relationships alive. Daily reflections, guided journals, curated gifts, and private coaching for mature adults.">
+<title>Rekindled &mdash; Wisdom for relationships in the second half of life</title>
+<meta name="description" content="Rediscover play, deepen love, and do the inner work that keeps relationships alive. Daily reflections, guided journaling, curated gifts, and private coaching for mature adults.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -59,6 +59,12 @@ img{max-width:100%;display:block}
   letter-spacing:.04em;text-transform:uppercase;transition:all .2s;border:none;cursor:pointer;
 }
 .nav-cta:hover{background:var(--primary-light);color:#fff;transform:translateY(-1px);box-shadow:0 4px 16px rgba(139,58,74,.25)}
+.lang-switch{
+  font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:700;
+  color:var(--muted);letter-spacing:.06em;padding:6px 14px;
+  border:1.5px solid var(--border);border-radius:100px;transition:all .2s;
+}
+.lang-switch:hover{color:var(--primary);border-color:var(--primary);background:var(--primary-pale)}
 .mobile-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
 .mobile-toggle svg{width:24px;height:24px;stroke:var(--text);fill:none;stroke-width:2;stroke-linecap:round}
 
@@ -213,9 +219,7 @@ img{max-width:100%;display:block}
   max-width:var(--max-w);margin:0 auto;display:grid;
   grid-template-columns:1fr 1fr;gap:60px;align-items:center;
 }
-.product-visual{
-  position:relative;
-}
+.product-visual{position:relative}
 .product-book{
   background:linear-gradient(135deg,var(--primary),#6B2D3E);
   border-radius:var(--radius-lg);padding:60px 40px;text-align:center;
@@ -261,9 +265,7 @@ img{max-width:100%;display:block}
 }
 .product-features li:last-child{border-bottom:none}
 .product-features .check{color:var(--gold);font-weight:700;flex-shrink:0;margin-top:2px}
-.product-price{
-  display:flex;align-items:baseline;gap:12px;margin-bottom:24px;
-}
+.product-price{display:flex;align-items:baseline;gap:12px;margin-bottom:24px}
 .product-price .price{
   font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:600;color:var(--primary);
 }
@@ -286,9 +288,7 @@ img{max-width:100%;display:block}
   font-weight:300;line-height:1.25;letter-spacing:-.02em;margin-bottom:16px;
 }
 .shop-header p{color:var(--muted);line-height:1.7;font-weight:300}
-.shop-categories{
-  display:flex;gap:8px;justify-content:center;margin-bottom:40px;flex-wrap:wrap;
-}
+.shop-categories{display:flex;gap:8px;justify-content:center;margin-bottom:40px;flex-wrap:wrap}
 .shop-cat{
   font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:600;
   text-transform:uppercase;letter-spacing:.08em;padding:10px 24px;
@@ -410,7 +410,7 @@ img{max-width:100%;display:block}
   font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.4rem);
   font-weight:300;line-height:1.3;margin-bottom:16px;
 }
-.footer-cta p{color:var(--muted);margin-bottom:32px;font-weight:300;max-width:480px;margin-left:auto;margin-right:auto;margin-bottom:32px}
+.footer-cta p{color:var(--muted);margin-bottom:32px;font-weight:300;max-width:480px;margin-left:auto;margin-right:auto}
 .footer{
   padding:48px 24px 32px;background:var(--dark2);color:rgba(255,255,255,.4);
   font-family:'DM Sans',sans-serif;font-size:.78rem;
@@ -442,9 +442,7 @@ img{max-width:100%;display:block}
   background:var(--surface);border:1px solid var(--border2);border-radius:var(--radius-xl);
   padding:40px;box-shadow:var(--shadow);text-align:left;
 }
-.quiz-progress{
-  display:flex;gap:4px;margin-bottom:28px;
-}
+.quiz-progress{display:flex;gap:4px;margin-bottom:28px}
 .quiz-progress .qp-step{
   flex:1;height:4px;border-radius:2px;background:var(--bg2);transition:background .3s;
 }
@@ -527,8 +525,8 @@ img{max-width:100%;display:block}
       <li><a href="#product">Journal</a></li>
       <li><a href="#shop">Gifts</a></li>
       <li><a href="#sessions">Sessions</a></li>
+      <li><a href="es.html" class="lang-switch">ES</a></li>
     </ul>
-    <a href="es.html" style="font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:600;color:var(--muted);letter-spacing:.05em">ES</a>
     <a href="#reflection" class="nav-cta">Start Free</a>
     <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu">
       <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -539,8 +537,8 @@ img{max-width:100%;display:block}
 <!-- ═══════════ HERO ═══════════ -->
 <section class="hero" id="top">
   <div class="hero-content">
-    <div class="hero-label">Relationship Wisdom for the Second Half</div>
-    <h1>What if you could<br><em>let go of the worry</em><br>and love more deeply?</h1>
+    <div class="hero-label">Wisdom for the second half of life</div>
+    <h1>What if you could<br><em>let go of worry</em><br>and love more deeply?</h1>
     <p class="hero-sub">
       A space for reflection, play, and rediscovery. Inspired by the wisdom of
       Esther Perel and Melody Beattie &mdash; because the best relationships
@@ -561,7 +559,7 @@ img{max-width:100%;display:block}
 <section class="reflection" id="reflection">
   <div class="reflection-inner">
     <div class="section-label fade-in">Free Daily Reflection</div>
-    <h2 class="fade-in fade-in-delay-1">A moment of wisdom,<br>delivered each morning</h2>
+    <h2 class="fade-in fade-in-delay-1">A moment of wisdom,<br>every morning in your inbox</h2>
     <div class="reflection-card fade-in fade-in-delay-2">
       <div class="reflection-date" id="reflectionDate"></div>
       <div class="reflection-quote" id="reflectionQuote">
@@ -576,9 +574,9 @@ img{max-width:100%;display:block}
       </div>
       <div class="email-capture">
         <input type="email" placeholder="Your email for daily reflections..." id="emailInput">
-        <button class="btn btn-primary" onclick="handleEmailSignup()">Get Free</button>
+        <button class="btn btn-primary" onclick="handleEmailSignup()">Get It Free</button>
       </div>
-      <div class="email-fine">Join 2,000+ who start mornings with intention. Unsubscribe anytime.</div>
+      <div class="email-fine">Join 2,000+ people who start their mornings with intention. Cancel anytime.</div>
     </div>
   </div>
 </section>
@@ -586,7 +584,7 @@ img{max-width:100%;display:block}
 <!-- ═══════════ QUOTE BAND ═══════════ -->
 <div class="quote-band">
   <blockquote>
-    ""Eroticism is not sex. It is the poetry that accompanies it &mdash; the quality of
+    "Eroticism is not sex. It is the poetry that accompanies it &mdash; the quality of
     imagination, curiosity, playfulness, mystery, and risk-taking that people
     bring to their relationship."
   </blockquote>
@@ -598,16 +596,16 @@ img{max-width:100%;display:block}
   <div class="philosophy-grid">
     <div class="fade-in">
       <div class="section-label" style="color:var(--gold)">Our Philosophy</div>
-      <h2>The relationship that matters most is the one<br><em>between you and life itself</em></h2>
+      <h2>The most important relationship is the one you have<br><em>with yourself and with life</em></h2>
       <p>
         We believe that love doesn't diminish with age &mdash; it deepens.
-        That letting go isn't giving up &mdash; it's making room.
+        That letting go isn't giving up &mdash; it's making space.
         And that play isn't just for the young &mdash; it's what keeps us <em>alive</em>.
       </p>
       <p>
-        Rekindled draws from the work of Esther Perel on erotic intelligence and
-        relationship dynamics, and Melody Beattie's transformative philosophy of
-        letting go. We create tools for people who want more than survival &mdash;
+        Rekindled draws on the work of Esther Perel on erotic intelligence and
+        relationship dynamics, and on Melody Beattie's transformative philosophy
+        of letting go. We create tools for people who want more than to survive &mdash;
         they want to <em>flourish</em>.
       </p>
     </div>
@@ -620,7 +618,7 @@ img{max-width:100%;display:block}
       <div class="pillar">
         <div class="pillar-icon">&#9830;</div>
         <h4>Erotic Intelligence</h4>
-        <p>Rediscover curiosity, mystery, and aliveness in your connections</p>
+        <p>Rediscover curiosity, mystery, and vitality in your connections</p>
       </div>
       <div class="pillar">
         <div class="pillar-icon">&#9733;</div>
@@ -630,7 +628,7 @@ img{max-width:100%;display:block}
       <div class="pillar">
         <div class="pillar-icon">&#10084;</div>
         <h4>The Inner Work</h4>
-        <p>"Who were you in this relationship? What role did you play?"</p>
+        <p>"Who were you in that relationship? What role did you play?"</p>
       </div>
     </div>
   </div>
@@ -641,7 +639,7 @@ img{max-width:100%;display:block}
   <div class="quiz-inner">
     <div class="section-label fade-in">Free Self-Discovery Tool</div>
     <h2 class="fade-in fade-in-delay-1">How's Your<br>Eroticism?</h2>
-    <p class="fade-in fade-in-delay-2">7 questions inspired by Esther Perel's erotic intelligence framework. Discover how alive your inner fire really is.</p>
+    <p class="fade-in fade-in-delay-2">7 questions inspired by Esther Perel's framework on erotic intelligence. Discover how alive your inner fire really is.</p>
 
     <div class="quiz-card fade-in fade-in-delay-3" id="quizCard">
       <div class="quiz-progress" id="quizProgress"></div>
@@ -663,7 +661,7 @@ img{max-width:100%;display:block}
           <input type="email" placeholder="Get your full report..." id="quizEmail">
           <button class="btn btn-gold" onclick="handleQuizEmail()">Send Report</button>
         </div>
-        <div class="email-fine">We'll send your detailed erotic intelligence analysis free</div>
+        <div class="email-fine">We'll send you your detailed erotic intelligence analysis for free</div>
       </div>
     </div>
   </div>
@@ -676,31 +674,31 @@ img{max-width:100%;display:block}
       <div class="product-book">
         <div class="book-label">Digital Product</div>
         <h3>The Inner Work Journal</h3>
-        <div class="book-sub">A guided journey to deeper connection</div>
+        <div class="book-sub">A guided journey toward deeper connection</div>
         <div class="book-author">by Rekindled</div>
       </div>
     </div>
     <div class="product-info fade-in fade-in-delay-2">
       <div class="section-label">Digital Product</div>
-      <h2>The guided journal for people who want to<br><em>love more honestly</em></h2>
+      <h2>The guided journal for those who want to<br><em>love with more honesty</em></h2>
       <p>
-        30 days of prompts, exercises, and reflections drawn from the wisdom of
-        relationship experts. Designed for individuals and couples who believe the
-        best relationships require honest inner work.
+        30 days of prompts, exercises, and reflections based on the wisdom of
+        relationship experts. Designed for individuals and couples who believe
+        the best relationships require honest inner work.
       </p>
       <ul class="product-features">
-        <li><span class="check">&#10003;</span> 30 daily guided prompts based on Perel's relationship dynamics framework</li>
-        <li><span class="check">&#10003;</span> "Who Were You?" self-reflection exercises after each relationship chapter</li>
-        <li><span class="check">&#10003;</span> Play &amp; curiosity challenges to reignite connection</li>
-        <li><span class="check">&#10003;</span> Letting Go meditations inspired by Melody Beattie</li>
-        <li><span class="check">&#10003;</span> Printable card deck: 52 conversation starters for couples</li>
+        <li><span class="check">&#10003;</span> 30 guided daily prompts based on Perel's relationship dynamics framework</li>
+        <li><span class="check">&#10003;</span> "Who were you?" self-reflection exercises after each chapter</li>
+        <li><span class="check">&#10003;</span> Play and curiosity challenges to rekindle connection</li>
+        <li><span class="check">&#10003;</span> Letting go meditations inspired by Melody Beattie</li>
+        <li><span class="check">&#10003;</span> Printable deck: 52 conversation-starter questions for couples</li>
         <li><span class="check">&#10003;</span> Instant digital download (PDF + interactive version)</li>
       </ul>
       <div class="product-price">
         <span class="price">$14.99</span>
         <span class="was">$29.99</span>
       </div>
-      <a href="#" class="btn btn-primary" onclick="alert('Payment integration coming soon!')">Obtener El Journal</a>
+      <a href="#" class="btn btn-primary" onclick="alert('Payment integration coming soon!')">Get The Journal</a>
     </div>
   </div>
 </section>
@@ -709,8 +707,8 @@ img{max-width:100%;display:block}
 <section class="shop" id="shop">
   <div class="shop-header fade-in">
     <div class="section-label">Curated Gift Shop</div>
-    <h2>Extravagant gifts for the person<br>who <em>deserves to feel cherished</em></h2>
-    <p>Hand-picked luxury gifts that say more than words. Every purchase supports our mission of deeper connection.</p>
+    <h2>Extravagant gifts for someone who<br><em>deserves to feel appreciated</em></h2>
+    <p>Hand-selected luxury gifts that say more than words. Every purchase supports our mission of deeper connection.</p>
   </div>
 
   <div class="shop-categories fade-in fade-in-delay-1">
@@ -735,14 +733,14 @@ img{max-width:100%;display:block}
       <p>
         Whether you're navigating a transition, rebuilding after loss,
         or simply want to deepen what you already have &mdash; these sessions
-        provide a safe, expert-guided space for breakthrough clarity.
+        offer a safe, guided space for transformative clarity.
       </p>
       <ul class="session-includes">
         <li>
           <div class="session-icon" style="background:var(--primary-pale)">&#128172;</div>
           <div>
             <h5>Deep Relationship Audit</h5>
-            <p>Understand your patterns, dynamics, and growth edges</p>
+            <p>Understand your patterns, dynamics, and areas for growth</p>
           </div>
         </li>
         <li>
@@ -763,7 +761,7 @@ img{max-width:100%;display:block}
           <div class="session-icon" style="background:var(--gold-pale)">&#128274;</div>
           <div>
             <h5>Completely Confidential</h5>
-            <p>A judgment-free zone for honest exploration</p>
+            <p>A judgment-free space to explore with honesty</p>
           </div>
         </li>
       </ul>
@@ -775,9 +773,9 @@ img{max-width:100%;display:block}
         <div class="booking-duration">&#9200; 90 minutes &middot; Video or Phone</div>
         <ul class="booking-features">
           <li><span class="bf-check">&#10003;</span> Pre-session questionnaire to maximize your time</li>
-          <li><span class="bf-check">&#10003;</span> 90-minute deep dive session via Zoom</li>
-          <li><span class="bf-check">&#10003;</span> Recorded session summary &amp; action items</li>
-          <li><span class="bf-check">&#10003;</span> 7-day email follow-up support</li>
+          <li><span class="bf-check">&#10003;</span> 90-minute deep session via Zoom</li>
+          <li><span class="bf-check">&#10003;</span> Recorded summary and action plan</li>
+          <li><span class="bf-check">&#10003;</span> 7-day email follow-up</li>
           <li><span class="bf-check">&#10003;</span> Free copy of The Inner Work Journal ($14.99 value)</li>
         </ul>
         <a href="#" class="btn btn-primary" style="width:100%;justify-content:center" onclick="alert('Booking calendar coming soon!')">Book Your Session</a>
@@ -791,15 +789,15 @@ img{max-width:100%;display:block}
 <div class="quote-band" style="background:var(--dark)">
   <blockquote>
     "Today I will know that I don't have to worry about anything. If I worry,
-    I will do it with the understanding that I am choosing to worry, and that it is not necessary."
+    I will do so with the understanding that I am choosing to worry, and that it is not necessary."
   </blockquote>
   <cite>&mdash; Melody Beattie, The Language of Letting Go</cite>
 </div>
 
 <!-- ═══════════ FOOTER CTA ═══════════ -->
 <section class="footer-cta">
-  <h2 class="serif fade-in">Begin your morning differently</h2>
-  <p class="fade-in fade-in-delay-1">Join thousands receiving a daily dose of relationship wisdom, reflection prompts, and the courage to let go.</p>
+  <h2 class="serif fade-in">Start your mornings differently</h2>
+  <p class="fade-in fade-in-delay-1">Join thousands who receive a daily dose of relational wisdom, reflection prompts, and the courage to let go.</p>
   <div class="email-capture fade-in fade-in-delay-2" style="max-width:440px;margin:0 auto">
     <input type="email" placeholder="Your email address...">
     <button class="btn btn-gold">Subscribe Free</button>
@@ -840,78 +838,78 @@ document.getElementById('reflectionDate').textContent =
 /* ─── DAILY REFLECTIONS (rotate) ─── */
 const REFLECTIONS = [
   {
-    quote: "\u00bfQu\u00e9 tal si supi\u00e9ramos que todo lo que est\u00e1 ocurriendo y todo lo que ha ocurrido en nuestra vida ha tenido que pasar, ha sido planeado para cada uno de nosotros y es lo que m\u00e1s nos conviene?",
-    author: "Melody Beattie, El Lenguaje del Adi\u00f3s",
-    prompt: "Piensa en una preocupaci\u00f3n que cargaste esta semana. \u00bfQu\u00e9 cambiar\u00eda si supieras, con certeza, que se resolver\u00e1 de la mejor manera posible? Escribe qu\u00e9 har\u00edas diferente hoy."
+    quote: "What if we knew that everything that is happening and everything that has happened in our life had to happen, was planned for each one of us, and is what is best for us?",
+    author: "Melody Beattie, The Language of Letting Go",
+    prompt: "Think of one worry you carried this week. What would change if you knew, with certainty, that it would resolve in the best possible way? Write down what you would do differently today."
   },
   {
-    quote: "Una relaci\u00f3n no se trata de esta persona y aquella persona. La relaci\u00f3n es lo que sucede en el medio. Es la din\u00e1mica.",
+    quote: "A relationship is not about this person and that person. The relationship is what happens in between. It is the dynamic.",
     author: "Esther Perel",
-    prompt: "Reflexiona sobre tu relaci\u00f3n m\u00e1s importante ahora. Instead of thinking about what the other person does, ask: \u00bfQu\u00e9 din\u00e1mica estoy creando yo? \u00bfQu\u00e9 estoy enviando que provoca su respuesta?"
+    prompt: "Reflect on your most important relationship right now. Instead of thinking about what the other person does, ask: What dynamic am I creating? What am I sending that provokes their response?"
   },
   {
-    quote: "Humor and play is possibility. Possibility invites change. Change invites healing.",
+    quote: "Humor and playfulness are possibility. Possibility invites change. Change invites healing.",
     author: "Esther Perel",
-    prompt: "\u00bfCu\u00e1ndo fue la \u00faltima vez que jugaste de verdad con tu pareja o un ser querido? No algo agradable y familiar, sino algo nuevo y un poco arriesgado. Planea un momento juguet\u00f3n hoy."
+    prompt: "When was the last time you truly played with your partner or a loved one? Not something nice and familiar, but something new and slightly risky. Plan a playful moment today."
   },
   {
-    quote: "\u00bfQu\u00e9 tal si tuvi\u00e9ramos la garant\u00eda de que la gente que amamos est\u00e1 experimentando exactamente lo que necesita para convertirse en aquello que estaba destinada a convertirse?",
-    author: "Melody Beattie, El Lenguaje del Adi\u00f3s",
-    prompt: "\u00bfHay alguien a quien est\u00e1s intentando controlar o arreglar? Escribe qu\u00e9 cambiar\u00eda si confiaras en que su camino se est\u00e1 desplegando perfectamente, aunque parezca desordenado desde donde t\u00fa est\u00e1s."
+    quote: "What if we had the guarantee that the people we love are experiencing exactly what they need to become what they were meant to become?",
+    author: "Melody Beattie, The Language of Letting Go",
+    prompt: "Is there someone you\u2019re trying to control or fix? Write down what would change if you trusted that their path is unfolding perfectly, even if it looks messy from where you stand."
   },
   {
-    quote: "El erotismo es la poes\u00eda que lo acompa\u00f1a. Es el significado que le damos. Es la calidad de imaginaci\u00f3n, curiosidad, juego, misterio y toma de riesgos.",
+    quote: "Eroticism is the poetry that accompanies it. It is the meaning we give it. It is the quality of imagination, curiosity, playfulness, mystery, and risk-taking.",
     author: "Esther Perel",
-    prompt: "Eroticism isn't about sex \u2014 it's about aliveness. \u00bfEn qu\u00e9 \u00e1rea de tu vida dejaste de ser curioso? Elige una y aborda hoy con los ojos de un principiante absoluto."
+    prompt: "Eroticism is not about sex \u2014 it\u2019s about being alive. In what area of your life did you stop being curious? Choose one and approach it today with the eyes of an absolute beginner."
   },
   {
     quote: "You can take responsibility for things without blaming yourself, and you can hold the other person accountable without blaming them.",
     author: "Esther Perel",
-    prompt: "Think of a past conflict. \u00bfPuedes nombrar tu papel sin auto-culpa? \u00bfPuedes nombrar el suyo sin acusaci\u00f3n? Escribe ambos lados con compasi\u00f3n."
+    prompt: "Think of a past conflict. Can you name your role without self-blame? Can you name theirs without accusation? Write both sides with compassion."
   },
   {
-    quote: "Hoy sabr\u00e9 que no tengo que preocuparme por nada. Si me preocupo, lo har\u00e9 con el entendimiento de que estoy eligiendo preocuparme, y que esto no es necesario.",
-    author: "Melody Beattie, El Lenguaje del Adi\u00f3s",
-    prompt: "List three things you're worried about right now. For each one, write: 'Elijo soltar esta preocupaci\u00f3n, confiando en que se resolver\u00e1 de la mejor manera posible y en el momento adecuado.'"
+    quote: "Today I will know that I don\u2019t have to worry about anything. If I worry, I will do so with the understanding that I am choosing to worry, and that it is not necessary.",
+    author: "Melody Beattie, The Language of Letting Go",
+    prompt: "Write down three things you\u2019re worried about right now. For each one, write: \u2018I choose to let go of this worry, trusting that it will resolve in the best possible way and at the right time.\u2019"
   }
 ];
 
 // Show today's reflection
 const todayIdx = now.getDay();
 const ref = REFLECTIONS[todayIdx % REFLECTIONS.length];
-document.getElementById('reflectionQuote').innerHTML = `"${ref.quote}"`;
-document.getElementById('reflectionPrompt').innerHTML = `<strong>Today's prompt:</strong> ${ref.prompt}`;
+document.getElementById('reflectionQuote').innerHTML = `\u201C${ref.quote}\u201D`;
+document.getElementById('reflectionPrompt').innerHTML = `<strong>Today\u2019s prompt:</strong> ${ref.prompt}`;
 document.querySelector('.reflection-author').innerHTML = `&mdash; ${ref.author}`;
 
 /* ─── QUIZ ─── */
 const QUIZ = [
   {
-    q: "\u00bfCu\u00e1ndo fue la \u00faltima vez que sentiste verdadera curiosidad por tu pareja \u2014 no por obligaci\u00f3n, sino por deseo genuino de descubrir algo nuevo?",
-    opts: ["It's been a long time... we know each other too well", "Sometimes, when we do something outside routine", "Con frecuencia \u2014 siempre hay algo nuevo que descubrir", "No recuerdo la \u00faltima vez"]
+    q: "When was the last time you felt genuine curiosity about your partner \u2014 not out of obligation, but out of a real desire to discover something new?",
+    opts: ["It\u2019s been a while... we know each other too well by now", "Sometimes, when we do something outside the routine", "Often \u2014 there\u2019s always something new to discover", "I can\u2019t remember the last time"]
   },
   {
-    q: "\u00bfC\u00f3mo describes el papel del juego y la espontaneidad en tu vida \u00edntima?",
-    opts: ["Pr\u00e1cticamente no existe \u2014 todo es serio y rutinario", "It shows up sometimes, but we struggle to maintain it", "Es parte natural de c\u00f3mo nos conectamos", "Me gustar\u00eda m\u00e1s, pero me da verg\u00fcenza o miedo"]
+    q: "How would you describe the role of play and spontaneity in your intimate life?",
+    opts: ["It\u2019s practically nonexistent \u2014 everything is serious and routine", "It shows up sometimes, but we struggle to maintain it", "It\u2019s a natural part of how we connect", "I\u2019d like more, but I feel embarrassed or afraid"]
   },
   {
-    q: "Cuando piensas en \u2018erotismo\u2019, \u00bfqu\u00e9 viene primero a tu mente?",
-    opts: ["Solo sexo y atracci\u00f3n f\u00edsica", "Something that fades over time", "Imaginaci\u00f3n, misterio, riesgo \u2014 una energ\u00eda vital", "Something I haven't explored enough"]
+    q: "When you think of \u2018eroticism,\u2019 what comes to mind first?",
+    opts: ["Just sex and physical attraction", "Something that fades with time", "Imagination, mystery, risk \u2014 a vital energy", "Something I haven\u2019t explored enough"]
   },
   {
-    q: "\u00bfCon qu\u00e9 frecuencia te atreves a hacer algo ligeramente fuera de tu zona de confort en una relaci\u00f3n?",
-    opts: ["Casi nunca \u2014 prefiero lo seguro y predecible", "When my partner suggests it, I follow", "Regularmente \u2014 creo que el riesgo es necesario", "Sol\u00eda hacerlo, pero ya no tanto"]
+    q: "How often do you dare to do something slightly outside your comfort zone in a relationship?",
+    opts: ["Almost never \u2014 I prefer what\u2019s safe and predictable", "When my partner suggests it, I go along", "Regularly \u2014 I believe risk is necessary", "I used to, but not so much anymore"]
   },
   {
-    q: "En tu relaci\u00f3n m\u00e1s importante, \u00bfqu\u00e9 tanto espacio hay para el misterio?",
-    opts: ["Ninguno \u2014 lo sabemos todo el uno del otro", "Poco \u2014 la convivencia lo elimina", "Bastante \u2014 cultivamos espacios individuales", "I haven't thought about that before"]
+    q: "In your most important relationship, how much space is there for mystery?",
+    opts: ["None \u2014 we know everything about each other", "Very little \u2014 daily life eliminates it", "Quite a bit \u2014 we cultivate individual spaces", "I haven\u2019t thought about that before"]
   },
   {
-    q: "\u00bfC\u00f3mo manejas el humor cuando hay tensi\u00f3n en tu relaci\u00f3n?",
-    opts: ["No hay humor cuando hay problemas \u2014 todo es serio", "A veces logro re\u00edrme, pero me cuesta", "Humor is my first tool for reconnecting", "Me r\u00edo solo, pero no con mi pareja en esos momentos"]
+    q: "How do you handle humor when there\u2019s tension in your relationship?",
+    opts: ["There\u2019s no humor when there are problems \u2014 everything is serious", "Sometimes I manage to laugh, but it\u2019s hard", "Humor is my first tool for reconnecting", "I laugh on my own, but not with my partner in those moments"]
   },
   {
-    q: "\u00bfQu\u00e9 crees que reavivar\u00eda m\u00e1s la energ\u00eda vital en tu relaci\u00f3n?",
-    opts: ["If my partner changed or improved certain things", "Doing my own inner work first", "Learning to play, take risks, and be curious together", "Simplemente m\u00e1s tiempo y menos estr\u00e9s"]
+    q: "What do you think would most rekindle the vital energy in your relationship?",
+    opts: ["If my partner changed or improved certain things", "Doing my own inner work first", "Learning to play, take risks, and be curious together", "Simply more time and less stress"]
   }
 ];
 
@@ -960,10 +958,10 @@ function showResults() {
 
   // Eroticism types
   const types = [
-    { type: 'Dormant Flame', title: 'Tu erotismo est\u00e1 en pausa, no apagado', desc: 'Routine and responsibilities have covered your inner fire with ashes. Pero la llama sigue ah\u00ed. Tu camino: redescubrir la curiosidad. Empieza con algo peque\u00f1o \u2014 una pregunta que nunca le has hecho a tu pareja, un riesgo m\u00ednimo que te haga sentir vivo de nuevo.' },
-    { type: 'Controlled Fire', title: 'Your eroticism exists, but you keep it in check', desc: 'Sientes el deseo de conexi\u00f3n profunda, pero algo te frena \u2014 quiz\u00e1s el control, quiz\u00e1s la verg\u00fcenza. As Beattie says: letting go isn't giving up, it's making room. Your path: practice letting go and allow yourself to play without an agenda.' },
-    { type: 'Curious Spark', title: 'Tu erotismo est\u00e1 vivo y busca m\u00e1s profundidad', desc: 'Ya entiendes que el erotismo es m\u00e1s que sexo \u2014 es imaginaci\u00f3n, riesgo, misterio. Your next step: take that curiosity to the next level. \u00bfQu\u00e9 riesgo emocional puedes tomar esta semana con alguien que amas?' },
-    { type: 'Living Flame', title: 'Your eroticism is an active life force', desc: 'El juego, el humor y la curiosidad son parte de c\u00f3mo vives tus relaciones. Entiendes la "figura ocho" \u2014 que lo que t\u00fa haces afecta lo que el otro hace. Tu camino: compartir esta sabidur\u00eda y seguir profundizando.' }
+    { type: 'Dormant Flame', title: 'Your eroticism is on pause, not extinguished', desc: 'Routine and responsibilities have covered your inner fire with ashes. But the flame is still there. Your path: rediscover curiosity. Start with something small \u2014 a question you\u2019ve never asked your partner, a small risk that makes you feel alive again.' },
+    { type: 'Controlled Fire', title: 'Your eroticism exists, but you keep it in check', desc: 'You feel the desire for deep connection, but something holds you back \u2014 perhaps control, perhaps shame. As Beattie says: letting go isn\u2019t giving up, it\u2019s making space. Your path: practice letting go and allow yourself to play without an agenda.' },
+    { type: 'Curious Spark', title: 'Your eroticism is alive and seeking more depth', desc: 'You already understand that eroticism is more than sex \u2014 it\u2019s imagination, risk, mystery. Your next step: take that curiosity to the next level. What emotional risk can you take this week with someone you love?' },
+    { type: 'Living Flame', title: 'Your eroticism is an active vital force', desc: 'Play, humor, and curiosity are part of how you live your relationships. You understand the \u201Cfigure eight\u201D \u2014 that what you do affects what the other person does. Your path: share this wisdom and keep going deeper.' }
   ];
 
   const typeIdx = answers.reduce((a, b) => a + b, 0) % types.length;
@@ -977,18 +975,18 @@ renderQuiz();
 
 /* ─── GIFT SHOP ─── */
 const GIFTS = [
-  { name: 'Couples Massage Experience', desc: 'Un d\u00eda lujoso de spa para dos con aromaterapia y suite privada.', price: '$189 - $450', emoji: '\ud83d\udc86', cat: 'experience', tag: 'Popular' },
-  { name: 'Handwritten Love Letter Kit', desc: 'Set premium de papeler\u00eda con sello de cera, pluma de caligraf\u00eda y prompts guiados.', price: '$65', emoji: '\ud83d\udc8c', cat: 'romantic', tag: '' },
-  { name: 'Cashmere Throw Blanket', desc: 'Cachemira ultra-suave en tonos neutros c\u00e1lidos. Perfecta para tardes acogedoras.', price: '$295', emoji: '\ud83e\udde3', cat: 'home', tag: 'Luxury' },
-  { name: 'Vino A\u00f1ejo & Diario de Reflexi\u00f3n', desc: 'Bordeaux a\u00f1ejado junto con un diario de reflexi\u00f3n encuadernado en cuero.', price: '$145', emoji: '\ud83c\udf77', cat: 'romantic', tag: '' },
-  { name: 'Weekend Getaway Voucher', desc: 'Estad\u00eda en hotel boutique con cena reservada. Elige tu destino.', price: '$400 - $800', emoji: '\u2708\ufe0f', cat: 'experience', tag: 'Premium' },
-  { name: 'Aromatherapy Diffuser Set', desc: 'Difusor de cer\u00e1mica artesanal con 6 mezclas de aceites esenciales.', price: '$89', emoji: '\ud83d\udd6f\ufe0f', cat: 'self-care', tag: '' },
-  { name: 'Silk Robe & Eye Mask', desc: 'Mulberry silk robe and matching eye mask in champagne or midnight navy.', price: '$175', emoji: '\ud83d\udc58', cat: 'self-care', tag: 'M\u00e1s Vendido' },
-  { name: 'Stargazing Experience', desc: 'Sesi\u00f3n privada con telescopio y gu\u00eda. Constelaciones, champagne, mantas.', price: '$220', emoji: '\ud83d\udd2d', cat: 'experience', tag: '' },
-  { name: 'Colecci\u00f3n de Chocolates Artesanales', desc: '24 trufas del maestro chocolatero. Cacao de origen \u00fanico.', price: '$85', emoji: '\ud83c\udf6b', cat: 'romantic', tag: '' },
-  { name: 'Set de Coj\u00edn de Meditaci\u00f3n', desc: 'Zafu y zabut\u00f3n de trigo sarraceno org\u00e1nico en tonos tierra.', price: '$120', emoji: '\ud83e\uddd8', cat: 'self-care', tag: '' },
-  { name: 'Personalized Star Map', desc: 'Impresi\u00f3n del cielo nocturno en la fecha que se conocieron. Marco de museo.', price: '$95', emoji: '\u2b50', cat: 'romantic', tag: 'Popular' },
-  { name: 'Tr\u00edo de Velas de Lujo', desc: 'Velas de soya artesanales: Chimenea, Jard\u00edn de Medianoche, Ma\u00f1ana de Domingo.', price: '$78', emoji: '\ud83d\udd6f\ufe0f', cat: 'home', tag: '' },
+  { name: 'Couples Massage Experience', desc: 'A luxurious spa day for two with aromatherapy and private suite.', price: '$189 - $450', emoji: '\ud83d\udc86', cat: 'experience', tag: 'Popular' },
+  { name: 'Handwritten Love Letter Kit', desc: 'Premium stationery set with wax seal, calligraphy pen, and guided prompts.', price: '$65', emoji: '\ud83d\udc8c', cat: 'romantic', tag: '' },
+  { name: 'Italian Cashmere Blanket', desc: 'Ultra-soft cashmere in warm neutral tones. Perfect for cozy evenings.', price: '$295', emoji: '\ud83e\udde3', cat: 'home', tag: 'Luxury' },
+  { name: 'Vintage Wine & Reflection Journal', desc: 'Aged Bordeaux paired with a leather-bound reflection journal.', price: '$145', emoji: '\ud83c\udf77', cat: 'romantic', tag: '' },
+  { name: 'Weekend Getaway', desc: 'Boutique hotel stay with dinner reservations. Choose your destination.', price: '$400 - $800', emoji: '\u2708\ufe0f', cat: 'experience', tag: 'Premium' },
+  { name: 'Aromatherapy Diffuser Set', desc: 'Handcrafted ceramic diffuser with 6 essential oil blends.', price: '$89', emoji: '\ud83d\udd6f\ufe0f', cat: 'self-care', tag: '' },
+  { name: 'Silk Robe & Sleep Mask', desc: 'Mulberry silk robe with matching sleep mask in champagne or midnight blue.', price: '$175', emoji: '\ud83d\udc58', cat: 'self-care', tag: 'Best Seller' },
+  { name: 'Private Stargazing Night', desc: 'Private telescope session with a guide. Constellations, champagne, blankets.', price: '$220', emoji: '\ud83d\udd2d', cat: 'experience', tag: '' },
+  { name: 'Artisan Chocolate Collection', desc: '24 truffles from a master chocolatier. Single-origin cacao.', price: '$85', emoji: '\ud83c\udf6b', cat: 'romantic', tag: '' },
+  { name: 'Meditation Cushion Set', desc: 'Organic buckwheat zafu and zabuton in earthy tones.', price: '$120', emoji: '\ud83e\uddd8', cat: 'self-care', tag: '' },
+  { name: 'Custom Star Map', desc: 'Print of the night sky on the date you met. Museum-quality frame.', price: '$95', emoji: '\u2b50', cat: 'romantic', tag: 'Popular' },
+  { name: 'Luxury Candle Trio', desc: 'Artisan soy candles: Fireside, Midnight Garden, Sunday Morning.', price: '$78', emoji: '\ud83d\udd6f\ufe0f', cat: 'home', tag: '' },
 ];
 
 function renderGifts(filter = 'all') {
@@ -1005,7 +1003,7 @@ function renderGifts(filter = 'all') {
         <p>${g.desc}</p>
         <div class="gift-footer">
           <span class="gift-price">${g.price}</span>
-          <span class="gift-link">Shop Now &#8594;</span>
+          <span class="gift-link">Shop &#8594;</span>
         </div>
       </div>
     </div>
@@ -1021,14 +1019,14 @@ renderGifts();
 /* ─── EMAIL SIGNUP ─── */
 function handleEmailSignup() {
   const email = document.getElementById('emailInput').value.trim();
-  if (!email || !email.includes('@')) { alert('Por favor ingresa un email v\u00e1lido.'); return; }
-  alert(`\u00a1Gracias! Recibir\u00e1s tu primera reflexi\u00f3n diaria ma\u00f1ana por la ma\u00f1ana en ${email}`);
+  if (!email || !email.includes('@')) { alert('Please enter a valid email address.'); return; }
+  alert(`Thank you! You\u2019ll receive your first daily reflection tomorrow morning at ${email}`);
   document.getElementById('emailInput').value = '';
 }
 function handleQuizEmail() {
   const email = document.getElementById('quizEmail').value.trim();
-  if (!email || !email.includes('@')) { alert('Por favor ingresa un email v\u00e1lido.'); return; }
-  alert(`Tu an\u00e1lisis detallado de inteligencia er\u00f3tica ser\u00e1 enviado a ${email}`);
+  if (!email || !email.includes('@')) { alert('Please enter a valid email address.'); return; }
+  alert(`Your detailed erotic intelligence analysis will be sent to ${email}`);
   document.getElementById('quizEmail').value = '';
 }
 
