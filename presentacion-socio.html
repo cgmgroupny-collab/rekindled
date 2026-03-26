@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vivienne &mdash; Plan de Marketing para Socio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0F0D0C;--bg2:#171413;--surface:#1E1B19;--surface2:#252220;
+  --rose:#C47A7A;--rose-light:#D99A9A;--rose-deep:#9E5A5A;
+  --gold:#C9A96E;--gold-light:#DBBD8A;
+  --cream:#F5EDE0;--text:#F0EBE3;--text2:#B8AFA5;--muted:#7A726A;--faint:#4A443E;
+  --border:rgba(201,169,110,.12);
+  --ff-d:'Playfair Display',Georgia,serif;
+  --ff-u:'Outfit',system-ui,sans-serif;
+}
+html{font-size:16px;-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--ff-u);line-height:1.7}
+::selection{background:var(--rose);color:#fff}
+body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");opacity:.4}
+.container{max-width:900px;margin:0 auto;padding:0 32px}
+
+/* COVER */
+.cover{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;padding:40px}
+.cover::before{content:'';position:absolute;inset:0;background:linear-gradient(rgba(15,13,12,.6),rgba(15,13,12,.8)),url('images/hero-couple.png') center/cover;z-index:0}
+.cover-content{position:relative;z-index:1}
+.cover-logo{font-family:var(--ff-d);font-size:4rem;font-weight:400;color:var(--cream);margin-bottom:8px;letter-spacing:-.02em}
+.cover-logo em{color:var(--rose);font-style:italic}
+.cover-sub{font-size:1.1rem;color:var(--text2);margin-bottom:32px;max-width:500px;margin-left:auto;margin-right:auto}
+.cover-tag{font-size:.65rem;font-weight:600;text-transform:uppercase;letter-spacing:.25em;color:var(--gold);margin-bottom:20px}
+.cover-meta{font-size:.78rem;color:var(--muted);margin-top:40px}
+
+/* SECTIONS */
+.sec{padding:80px 0;border-bottom:1px solid rgba(255,255,255,.04)}
+.sec:last-child{border-bottom:none}
+.sec-label{font-size:.6rem;font-weight:600;text-transform:uppercase;letter-spacing:.25em;color:var(--gold);margin-bottom:14px}
+.sec-title{font-family:var(--ff-d);font-size:clamp(1.5rem,3vw,2.2rem);font-weight:400;line-height:1.2;margin-bottom:24px;letter-spacing:-.02em}
+.sec-title em{color:var(--rose);font-style:italic}
+.sec-text{color:var(--text2);font-size:.9rem;line-height:1.7;margin-bottom:20px;max-width:700px}
+
+/* CARDS */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin:24px 0}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px;transition:all .2s}
+.card:hover{border-color:var(--rose)}
+.card h4{font-size:.88rem;font-weight:600;color:var(--cream);margin-bottom:6px}
+.card p{font-size:.78rem;color:var(--muted);line-height:1.5}
+.card .num{font-family:var(--ff-d);font-size:2rem;font-weight:600;color:var(--rose);margin-bottom:8px}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:28px 24px;text-align:center}
+.stat .s-num{font-family:var(--ff-d);font-size:2.4rem;font-weight:600;color:var(--cream);margin-bottom:4px}
+.stat .s-label{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+
+/* TABLE */
+.tbl{width:100%;border-collapse:separate;border-spacing:0;margin:20px 0;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.tbl th{background:var(--surface2);text-align:left;padding:12px 16px;font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);border-bottom:1px solid var(--border)}
+.tbl td{padding:12px 16px;font-size:.85rem;color:var(--text2);border-bottom:1px solid rgba(255,255,255,.03)}
+.tbl tr:last-child td{border-bottom:none;font-weight:700;color:var(--cream)}
+
+/* TIMELINE */
+.timeline{margin:24px 0}
+.tl-item{display:flex;gap:20px;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.04)}
+.tl-item:last-child{border-bottom:none}
+.tl-dot{width:40px;height:40px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;color:#fff}
+.tl-content h5{font-size:.88rem;font-weight:600;color:var(--cream);margin-bottom:4px}
+.tl-content p{font-size:.78rem;color:var(--muted);line-height:1.5}
+
+/* FUNNEL */
+.funnel{display:flex;flex-direction:column;gap:4px;margin:24px 0;max-width:600px;margin-left:auto;margin-right:auto}
+.funnel-step{text-align:center;padding:18px 24px;border-radius:12px;font-size:.85rem;font-weight:600;transition:all .2s;position:relative}
+.funnel-step::after{content:'\25BC';position:absolute;bottom:-14px;left:50%;transform:translateX(-50%);color:var(--faint);font-size:.6rem}
+.funnel-step:last-child::after{display:none}
+
+/* CHECKLIST */
+.checklist{list-style:none;margin:20px 0}
+.checklist li{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:.85rem;color:var(--text2)}
+.checklist li:last-child{border-bottom:none}
+.chk-box{width:20px;height:20px;border:2px solid var(--faint);border-radius:4px;flex-shrink:0;margin-top:1px}
+
+/* IMAGE ROW */
+.img-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:24px 0}
+.img-row img{width:100%;border-radius:12px;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--border)}
+
+/* QUOTE */
+.quote{text-align:center;padding:48px 32px;margin:32px 0;border:1px solid var(--border);border-radius:16px;background:var(--surface);position:relative}
+.quote::before{content:'\201C';font-family:var(--ff-d);font-size:5rem;color:var(--rose);opacity:.15;position:absolute;top:10px;left:24px;line-height:1}
+.quote blockquote{font-family:var(--ff-d);font-size:1.3rem;font-weight:400;font-style:italic;color:var(--cream);line-height:1.5;max-width:550px;margin:0 auto 12px;position:relative}
+.quote cite{font-size:.72rem;color:var(--muted);font-style:normal}
+
+/* FOOTER */
+.pres-footer{text-align:center;padding:60px 32px 40px;color:var(--muted);font-size:.72rem}
+.pres-footer .f-logo{font-family:var(--ff-d);font-size:1.5rem;color:var(--cream);opacity:.5;margin-bottom:8px}
+
+@media print{
+  body{background:#fff;color:#222}
+  .cover{min-height:auto;padding:60px 40px;page-break-after:always}
+  .cover::before{background:#8B3A4A!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .sec{page-break-inside:avoid}
+  .card,.stat,.tbl,.quote{border:1px solid #ddd;background:#f9f9f9;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+@media(max-width:600px){
+  .stats{grid-template-columns:1fr}
+  .img-row{grid-template-columns:1fr}
+  .cover-logo{font-size:2.5rem}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════ COVER ═══════════ -->
+<div class="cover">
+  <div class="cover-content">
+    <div class="cover-tag">Plan de Marketing &amp; Modelo de Negocio</div>
+    <div class="cover-logo"><em>Vivienne</em></div>
+    <div class="cover-sub">La compa&ntilde;era de sabidur&iacute;a relacional con inteligencia artificial.<br>"Ella que est&aacute; viva."</div>
+    <div style="display:inline-flex;gap:12px;flex-wrap:wrap;justify-content:center">
+      <span style="background:var(--surface);border:1px solid var(--border);border-radius:100px;padding:8px 20px;font-size:.75rem;color:var(--gold)">Quiz de Inteligencia Er&oacute;tica</span>
+      <span style="background:var(--surface);border:1px solid var(--border);border-radius:100px;padding:8px 20px;font-size:.75rem;color:var(--rose)">Diario $14.99</span>
+      <span style="background:var(--surface);border:1px solid var(--border);border-radius:100px;padding:8px 20px;font-size:.75rem;color:var(--cream)">Sesiones $249</span>
+    </div>
+    <div class="cover-meta">Marzo 2026 &middot; Confidencial</div>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- ═══════════ EL PRODUCTO ═══════════ -->
+<div class="sec">
+  <div class="sec-label">01 &mdash; El Producto</div>
+  <div class="sec-title">&iquest;Qu&eacute; es <em>Vivienne</em>?</div>
+  <div class="sec-text">Vivienne es una compa&ntilde;era de inteligencia artificial para relaciones y crecimiento personal, dise&ntilde;ada para adultos maduros (45-65+). Inspirada en la sabidur&iacute;a de <strong>Esther Perel</strong> (inteligencia er&oacute;tica) y <strong>Melody Beattie</strong> (el arte de soltar).</div>
+
+  <div class="cards">
+    <div class="card">
+      <div style="font-size:1.5rem;margin-bottom:8px">&#128300;</div>
+      <h4>Quiz de Erotismo</h4>
+      <p>7 preguntas que revelan tu patr&oacute;n er&oacute;tico: Llama Dormida, Fuego Controlado, Chispa Curiosa o Llama Viva. Viral por dise&ntilde;o.</p>
+    </div>
+    <div class="card">
+      <div style="font-size:1.5rem;margin-bottom:8px">&#128214;</div>
+      <h4>Diario de Trabajo Interior</h4>
+      <p>30 d&iacute;as de prompts guiados + 52 tarjetas de conversaci&oacute;n para parejas. Producto digital a $14.99.</p>
+    </div>
+    <div class="card">
+      <div style="font-size:1.5rem;margin-bottom:8px">&#127873;</div>
+      <h4>Tienda de Regalos</h4>
+      <p>Regalos de lujo curados para parejas. Ingresos por comisi&oacute;n de afiliados (4-8% por venta).</p>
+    </div>
+    <div class="card">
+      <div style="font-size:1.5rem;margin-bottom:8px">&#128172;</div>
+      <h4>Sesiones Privadas</h4>
+      <p>90 minutos de gu&iacute;a profunda v&iacute;a Zoom. $249/sesi&oacute;n. Incluye plan de acci&oacute;n y seguimiento de 7 d&iacute;as.</p>
+    </div>
+    <div class="card">
+      <div style="font-size:1.5rem;margin-bottom:8px">&#9993;&#65039;</div>
+      <h4>Reflexi&oacute;n Diaria</h4>
+      <p>Email gratuito cada ma&ntilde;ana con sabidur&iacute;a de Perel y Beattie. Captura de leads para el embudo.</p>
+    </div>
+    <div class="card">
+      <div style="font-size:1.5rem;margin-bottom:8px">&#127760;</div>
+      <h4>Biling&uuml;e</h4>
+      <p>Sitio completo en ingl&eacute;s y espa&ntilde;ol. Sesiones disponibles en ambos idiomas.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ AUDIENCIA ═══════════ -->
+<div class="sec">
+  <div class="sec-label">02 &mdash; Audiencia Objetivo</div>
+  <div class="sec-title">&iquest;Para qui&eacute;n es <em>Vivienne</em>?</div>
+
+  <div class="cards">
+    <div class="card">
+      <h4>&#128105;&#8205;&#129309;&#8205;&#128104; En Relaci&oacute;n</h4>
+      <p>Parejas 45-65+ que quieren reavivar la chispa, profundizar la conexi&oacute;n y redescubrir el juego despu&eacute;s de a&ntilde;os juntos.</p>
+    </div>
+    <div class="card">
+      <h4>&#129318; En Transici&oacute;n</h4>
+      <p>Personas procesando separaci&oacute;n, divorcio o p&eacute;rdida. Haciendo el trabajo interior antes de la pr&oacute;xima relaci&oacute;n.</p>
+    </div>
+    <div class="card">
+      <h4>&#127793; Buscando Crecimiento</h4>
+      <p>Individuos que creen que la mejor relaci&oacute;n comienza con el trabajo interior. Seguidoras de Perel y Beattie.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ IMÁGENES ═══════════ -->
+<div class="sec">
+  <div class="sec-label">03 &mdash; Identidad Visual</div>
+  <div class="sec-title">Im&aacute;genes generadas por IA<br>para la <em>marca</em></div>
+  <div class="img-row">
+    <img src="images/hero-couple.png" alt="Pareja en terraza">
+    <img src="images/vivienne-portrait.png" alt="Vivienne">
+    <img src="images/journal-product.png" alt="Diario">
+  </div>
+  <div class="img-row">
+    <img src="images/hands-intimate.png" alt="Manos &iacute;ntimas">
+    <img src="images/gift-box.png" alt="Caja de regalo">
+    <img src="images/reflection-morning.png" alt="Reflexi&oacute;n matutina">
+  </div>
+</div>
+
+<!-- ═══════════ EMBUDO ═══════════ -->
+<div class="sec">
+  <div class="sec-label">04 &mdash; Embudo de Ventas</div>
+  <div class="sec-title">C&oacute;mo convertimos visitantes<br>en <em>clientes</em></div>
+
+  <div class="funnel">
+    <div class="funnel-step" style="background:rgba(201,169,110,.12);color:var(--gold);width:100%">&#127760; Quiz viral "&#191;C&oacute;mo est&aacute; tu Erotismo?" &mdash; GRATIS</div>
+    <div class="funnel-step" style="background:rgba(196,122,122,.1);color:var(--rose);width:85%;margin:0 auto">&#9993;&#65039; Captura de email &rarr; Reflexi&oacute;n diaria &mdash; GRATIS</div>
+    <div class="funnel-step" style="background:rgba(196,122,122,.15);color:var(--rose-light);width:65%;margin:0 auto">&#128214; Diario de Trabajo Interior &mdash; $14.99</div>
+    <div class="funnel-step" style="background:rgba(201,169,110,.2);color:var(--gold-light);width:45%;margin:0 auto">&#128172; Sesi&oacute;n Privada con Vivienne &mdash; $249</div>
+  </div>
+</div>
+
+<!-- ═══════════ FASES ═══════════ -->
+<div class="sec">
+  <div class="sec-label">05 &mdash; Plan de Acci&oacute;n en 3 Fases</div>
+  <div class="sec-title">De cero a ingresos en <em>30 d&iacute;as</em></div>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--gold)">S1</div>
+      <div class="tl-content">
+        <h5>FASE 1: Semana 1-2 &mdash; Lanzamiento Viral ($0)</h5>
+        <p>Compartir quiz en redes personales &bull; Pedir a 20 contactos que lo tomen y compartan &bull; Lanzar Instagram @askvivienne con 3 posts/d&iacute;a &bull; Unirse a grupos de Facebook de relaciones &bull; Configurar emails automatizados en ConvertKit<br><strong>Meta: 500 quizzes, 150 emails capturados</strong></p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--rose)">S3</div>
+      <div class="tl-content">
+        <h5>FASE 2: Semana 3-4 &mdash; Primeros Ingresos ($200-500 en anuncios)</h5>
+        <p>Anuncios de Facebook/Instagram ($10-15/d&iacute;a) dirigiendo al quiz &bull; Retarget a quienes tomaron el quiz con el diario &bull; Retarget a compradores del diario con sesiones &bull; Lanzar Pinterest con frases de reflexi&oacute;n &bull; Activar links de afiliados en tienda de regalos<br><strong>Meta: 15-25 ventas del diario, 1-2 sesiones</strong></p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot" style="background:var(--cream)">M2</div>
+      <div class="tl-content">
+        <h5>FASE 3: Mes 2-3 &mdash; Escalar y Construir Autoridad</h5>
+        <p>Aparecer en podcasts de relaciones &bull; Lanzar canal de YouTube "Vivienne Pregunta" &bull; Colaboraciones con coaches de relaciones &bull; Escalar anuncios a $400/mes &bull; SEO en Pinterest<br><strong>Meta: $2,000-3,500/mes en ingresos</strong></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ QUOTE ═══════════ -->
+<div class="quote">
+  <blockquote>"El erotismo no es sexo. Es la poes&iacute;a que lo acompa&ntilde;a &mdash; la calidad de imaginaci&oacute;n, curiosidad, juego, misterio y toma de riesgos."</blockquote>
+  <cite>&mdash; Esther Perel</cite>
+</div>
+
+<!-- ═══════════ PROYECCIONES ═══════════ -->
+<div class="sec">
+  <div class="sec-label">06 &mdash; Proyecciones de Ingresos</div>
+  <div class="sec-title">Camino a $3,500/mes en <em>90 d&iacute;as</em></div>
+
+  <table class="tbl">
+    <thead><tr><th>Fuente</th><th>Mes 1</th><th>Mes 2</th><th>Mes 3</th></tr></thead>
+    <tbody>
+      <tr><td>Ventas del Diario ($14.99)</td><td>$225-375</td><td>$450-750</td><td>$750-1,200</td></tr>
+      <tr><td>Sesiones Privadas ($249)</td><td>$249-498</td><td>$747-1,245</td><td>$1,245-1,992</td></tr>
+      <tr><td>Comisiones de Afiliados</td><td>$25-80</td><td>$75-200</td><td>$150-400</td></tr>
+      <tr><td><strong>TOTAL</strong></td><td><strong>$499-953</strong></td><td><strong>$1,272-2,195</strong></td><td><strong>$2,145-3,592</strong></td></tr>
+    </tbody>
+  </table>
+
+  <div class="stats">
+    <div class="stat"><div class="s-num">$0</div><div class="s-label">Costo para empezar</div></div>
+    <div class="stat"><div class="s-num">$499+</div><div class="s-label">Ingresos Mes 1</div></div>
+    <div class="stat"><div class="s-num">$3,500+</div><div class="s-label">Meta Mes 3</div></div>
+  </div>
+</div>
+
+<!-- ═══════════ INVERSIÓN ═══════════ -->
+<div class="sec">
+  <div class="sec-label">07 &mdash; Inversi&oacute;n Requerida</div>
+  <div class="sec-title">Modelo de bajo riesgo,<br><em>alto retorno</em></div>
+
+  <table class="tbl">
+    <thead><tr><th>Concepto</th><th>Costo</th><th>Notas</th></tr></thead>
+    <tbody>
+      <tr><td>Sitio web + hosting (Vercel)</td><td>$0</td><td>Ya construido y desplegado</td></tr>
+      <tr><td>6 im&aacute;genes profesionales (IA)</td><td>$0</td><td>Generadas con Gemini Pro</td></tr>
+      <tr><td>ConvertKit (emails)</td><td>$0</td><td>Gratis hasta 1,000 suscriptores</td></tr>
+      <tr><td>Stripe (pagos)</td><td>2.9% + $0.30</td><td>Solo se cobra cuando hay ventas</td></tr>
+      <tr><td>Anuncios FB/IG (Mes 1)</td><td>$200-300</td><td>Opcional, puede empezar a $0</td></tr>
+      <tr><td><strong>TOTAL PARA LANZAR</strong></td><td><strong>$0-300</strong></td><td><strong>Todo lo dem&aacute;s est&aacute; construido</strong></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ═══════════ ACCIONES INMEDIATAS ═══════════ -->
+<div class="sec">
+  <div class="sec-label">08 &mdash; Acciones Inmediatas</div>
+  <div class="sec-title">Qu&eacute; hacer <em>esta semana</em></div>
+
+  <ul class="checklist">
+    <li><div class="chk-box"></div>Crear cuenta de ConvertKit y configurar secuencia de bienvenida</li>
+    <li><div class="chk-box"></div>Crear Instagram @askvivienne y publicar 3 tarjetas con frases</li>
+    <li><div class="chk-box"></div>Crear p&aacute;gina de Facebook y compartir el quiz en red personal</li>
+    <li><div class="chk-box"></div>Enviar DM a 20 amigos pidi&eacute;ndoles que tomen el quiz</li>
+    <li><div class="chk-box"></div>Configurar cuenta de Stripe para ventas del diario</li>
+    <li><div class="chk-box"></div>Registrarse en Amazon Associates para la tienda de regalos</li>
+    <li><div class="chk-box"></div>Crear 4 im&aacute;genes compartibles de resultados del quiz</li>
+    <li><div class="chk-box"></div>Escribir los primeros 7 emails de reflexi&oacute;n diaria</li>
+    <li><div class="chk-box"></div>Instalar Facebook Pixel en el sitio para retargeting</li>
+    <li><div class="chk-box"></div>Publicar quiz en 3 grupos relevantes de Facebook</li>
+  </ul>
+</div>
+
+<!-- ═══════════ SITIO LIVE ═══════════ -->
+<div class="sec" style="text-align:center">
+  <div class="sec-label">09 &mdash; Sitio en Vivo</div>
+  <div class="sec-title">Todo est&aacute; construido y <em>listo</em></div>
+  <div class="sec-text" style="margin:0 auto 24px;text-align:center">El sitio web ya est&aacute; desplegado y funcional. Solo necesitamos activar los pagos y empezar a compartir.</div>
+  <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+    <a href="https://rekindled-app.vercel.app" target="_blank" style="background:var(--rose);color:#fff;padding:14px 32px;border-radius:100px;font-weight:600;font-size:.82rem;letter-spacing:.04em;text-decoration:none;transition:all .2s">Ver Sitio en Vivo &rarr;</a>
+    <a href="https://rekindled-app.vercel.app/pricing.html" target="_blank" style="background:var(--surface);border:1px solid var(--border);color:var(--cream);padding:14px 32px;border-radius:100px;font-weight:600;font-size:.82rem;text-decoration:none;transition:all .2s">Ver Precios &rarr;</a>
+  </div>
+</div>
+
+</div>
+
+<div class="pres-footer">
+  <div class="f-logo">&#10045; Vivienne</div>
+  <div>Plan de Marketing Confidencial &middot; Marzo 2026</div>
+  <div style="margin-top:8px;color:var(--faint)">&copy; 2026 Vivienne. Todos los derechos reservados.</div>
+</div>
+
+</body>
+</html>
