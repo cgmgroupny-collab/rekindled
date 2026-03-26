@@ -137,7 +137,10 @@ body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;b
 @media(max-width:900px){
   .about-grid,.sgrid{grid-template-columns:1fr}
   .pgrid{grid-template-columns:1fr 1fr}
-  .nav-links{display:none}.dots{display:none}
+  .nav-links{position:fixed;top:64px;left:0;right:0;background:rgba(15,13,12,.95);backdrop-filter:blur(20px);flex-direction:column;padding:20px;gap:16px;display:none;border-bottom:1px solid var(--faint);z-index:99}
+  .nav-links.open{display:flex}
+  .hamburger{display:block!important}
+  .dots{display:none}
   html{overflow:auto}body{overflow:auto;height:auto}
   .sections-wrapper{height:auto;overflow:visible}
   .section{position:relative;opacity:1;visibility:visible;min-height:100vh;padding:100px 24px}
@@ -163,9 +166,14 @@ body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;b
     <a href="#" onclick="goTo(4)" data-s="4">Sessions</a>
     <a href="#" onclick="goTo(5)" data-s="5">Reflect</a>
     <a href="pricing.html">Pricing</a>
+    <a href="#" onclick="goTo(3)" data-s="3">Store</a>
+    <a href="brand-board.html">Brand</a>
     <a href="es.html" class="lang-sw">ES</a>
   </div>
-  <a href="pricing.html" class="nav-cta">See Pricing</a>
+  <div style="display:flex;align-items:center;gap:12px">
+    <a href="pricing.html" class="nav-cta">See Pricing</a>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" style="display:none;background:none;border:1px solid var(--faint);border-radius:6px;padding:6px 8px;cursor:pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--cream)" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  </div>
 </nav>
 
 <div class="dots" id="dots"></div>
@@ -173,7 +181,7 @@ body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;b
 <div class="sections-wrapper" id="app">
 
   <!-- 0: HERO -->
-  <div class="section active" data-name="Home">
+  <div class="section active" data-name="Home" style="background:linear-gradient(rgba(15,13,12,.7),rgba(15,13,12,.85)),url('images/hero-couple.png') center/cover no-repeat">
     <div class="hero-content">
       <div class="hero-ey">Your AI Relationship Companion</div>
       <h1 class="hero-title">Meet <em>Vivienne</em></h1>
@@ -189,7 +197,7 @@ body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;b
   <div class="section" data-name="About">
     <div class="section-inner">
       <div class="about-grid">
-        <div class="about-visual"><div class="ai-name">Vivienne</div></div>
+        <div class="about-visual" style="background:url('images/vivienne-portrait.png') center/cover"><div class="ai-name" style="text-shadow:0 2px 40px rgba(0,0,0,.5)">Vivienne</div></div>
         <div>
           <div class="lbl">Meet Your Guide</div>
           <div class="ttl">The wise friend you wish<br>you'd had <em>sooner</em></div>
@@ -240,7 +248,7 @@ body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;b
   </div>
 
   <!-- 4: SESSIONS -->
-  <div class="section" data-name="Sessions">
+  <div class="section" data-name="Sessions" style="background:linear-gradient(rgba(15,13,12,.75),rgba(15,13,12,.9)),url('images/hands-intimate.png') center/cover no-repeat">
     <div class="section-inner">
       <div class="sgrid">
         <div>
@@ -266,7 +274,7 @@ body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;b
   </div>
 
   <!-- 5: DAILY REFLECTION -->
-  <div class="section" data-name="Reflect">
+  <div class="section" data-name="Reflect" style="background:linear-gradient(rgba(15,13,12,.8),rgba(15,13,12,.9)),url('images/reflection-morning.png') center/cover no-repeat">
     <div style="max-width:620px;margin:0 auto;text-align:center">
       <div class="lbl">Free Daily Reflection</div>
       <div class="ttl" style="margin-bottom:28px">A moment of wisdom,<br>every <em>morning</em></div>
@@ -307,9 +315,9 @@ function qE(){const e=document.getElementById('qEmail').value;if(!e||!e.includes
 function rSign(){const e=document.getElementById('rEmail').value;if(!e||!e.includes('@'))return alert('Please enter a valid email.');alert(`Welcome! Vivienne's first reflection arrives tomorrow at ${e}`)}
 
 const GIFTS=[
-  {n:'The Inner Work Journal',d:'30-day guided journal + 52 conversation cards for couples.',p:'$14.99',e:'&#128214;',tag:'Digital',bg:'linear-gradient(135deg,var(--rose-deep),#4A2A2A)'},
+  {n:'The Inner Work Journal',d:'30-day guided journal + 52 conversation cards for couples.',p:'$14.99',e:'',tag:'Digital',bg:'url(images/journal-product.png) center/cover'},
   {n:'Couples Massage Experience',d:'Luxurious spa day for two with aromatherapy & private suite.',p:'$189\u2013$450',e:'&#128134;',tag:'Popular',bg:'linear-gradient(135deg,#3A4A3A,#2A3A2A)'},
-  {n:'Silk Robe & Eye Mask',d:'Mulberry silk in champagne or midnight navy.',p:'$175',e:'&#128088;',tag:'Bestseller',bg:'linear-gradient(135deg,#3A3A4A,#2A2A3A)'},
+  {n:'Silk Robe & Eye Mask',d:'Mulberry silk in champagne or midnight navy.',p:'$175',e:'',tag:'Bestseller',bg:'url(images/gift-box.png) center/cover'},
   {n:'Weekend Getaway Voucher',d:'Boutique hotel + dinner. Choose your destination.',p:'$400\u2013$800',e:'&#9992;&#65039;',tag:'Premium',bg:'linear-gradient(135deg,#4A3A2A,#3A2A1A)'},
   {n:'Personalized Star Map',d:'The night sky on the date you met. Museum frame.',p:'$95',e:'&#11088;',tag:'Popular',bg:'linear-gradient(135deg,#1A2A3A,#0A1A2A)'},
   {n:'Stargazing Experience',d:'Private telescope, guide, champagne under the stars.',p:'$220',e:'&#128301;',tag:'',bg:'linear-gradient(135deg,#2A2A3A,#1A1A2A)'}
