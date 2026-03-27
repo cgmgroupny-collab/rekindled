@@ -39,8 +39,19 @@ body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;b
 .lang-sw:hover{border-color:var(--gold);color:var(--gold)}
 
 .sections-wrapper{height:100vh;position:relative;overflow:hidden}
-.section{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:80px 40px;opacity:0;visibility:hidden;pointer-events:none;z-index:0;transition:opacity .8s ease,visibility 0s .8s;will-change:opacity;overflow-y:auto}
-.section.active{opacity:1;visibility:visible;pointer-events:auto;z-index:1;transition:opacity .8s ease,visibility 0s 0s}
+.section{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:80px 40px;opacity:0;pointer-events:none;z-index:0;transform:translateY(60px) scale(.97);transition:opacity .7s cubic-bezier(.4,0,.2,1),transform .7s cubic-bezier(.4,0,.2,1);will-change:opacity,transform;overflow-y:auto}
+.section.active{opacity:1;pointer-events:auto;z-index:1;transform:translateY(0) scale(1)}
+.section.exit-up{opacity:0;transform:translateY(-60px) scale(.97)}
+.section.exit-down{opacity:0;transform:translateY(60px) scale(.97)}
+
+/* Arrow Nav */
+.arrow-nav{position:fixed;right:28px;bottom:32px;z-index:100;display:flex;flex-direction:column;gap:8px}
+.arrow-btn{width:44px;height:44px;border-radius:50%;border:1px solid var(--faint);background:rgba(15,13,12,.6);backdrop-filter:blur(12px);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .25s;color:var(--muted)}
+.arrow-btn:hover{border-color:var(--gold);color:var(--gold);background:rgba(15,13,12,.8);transform:scale(1.1)}
+.arrow-btn:active{transform:scale(.95)}
+.arrow-btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.arrow-btn.disabled{opacity:.2;pointer-events:none}
+.section-counter{font-family:var(--ff-u);font-size:.6rem;color:var(--muted);text-align:center;letter-spacing:.08em;margin-bottom:4px}
 .section-inner{max-width:1100px;width:100%;margin:0 auto}
 
 .dots{position:fixed;right:28px;top:50%;transform:translateY(-50%);z-index:100;display:flex;flex-direction:column;gap:14px}
@@ -140,7 +151,7 @@ body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;b
   .nav-links{position:fixed;top:64px;left:0;right:0;background:rgba(15,13,12,.95);backdrop-filter:blur(20px);flex-direction:column;padding:20px;gap:16px;display:none;border-bottom:1px solid var(--faint);z-index:99}
   .nav-links.open{display:flex}
   .hamburger{display:block!important}
-  .dots{display:none}
+  .dots{display:none}.arrow-nav{display:none}
   html{overflow:auto}body{overflow:auto;height:auto}
   .sections-wrapper{height:auto;overflow:visible}
   .section{position:relative;opacity:1;visibility:visible;min-height:100vh;padding:100px 24px}
@@ -177,6 +188,11 @@ body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;b
 </nav>
 
 <div class="dots" id="dots"></div>
+<div class="arrow-nav">
+  <div class="section-counter" id="secCounter">1 / 6</div>
+  <button class="arrow-btn disabled" id="arrUp" onclick="goTo(cur-1)"><svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg></button>
+  <button class="arrow-btn" id="arrDown" onclick="goTo(cur+1)"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></button>
+</div>
 
 <div class="sections-wrapper" id="app">
 
@@ -294,11 +310,61 @@ body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;b
 <script>
 const sections=document.querySelectorAll('.section');let cur=0,trans=false;
 const dotsEl=document.getElementById('dots');
+const arrUp=document.getElementById('arrUp'),arrDown=document.getElementById('arrDown'),secCounter=document.getElementById('secCounter');
+
 sections.forEach((s,i)=>{const d=document.createElement('div');d.className='dot'+(i===0?' active':'');d.onclick=()=>goTo(i);d.innerHTML=`<span class="dot-label">${s.dataset.name}</span>`;dotsEl.appendChild(d)});
-function goTo(idx){if(idx===cur||trans||idx<0||idx>=sections.length)return;trans=true;sections[cur].classList.remove('active');sections[idx].classList.add('active');document.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('active',i===idx));document.querySelectorAll('.nav-links a[data-s]').forEach(a=>a.classList.toggle('active',+a.dataset.s===idx));cur=idx;setTimeout(()=>trans=false,800)}
-let wt;document.addEventListener('wheel',e=>{if(innerWidth<900)return;clearTimeout(wt);wt=setTimeout(()=>{if(e.deltaY>30)goTo(cur+1);else if(e.deltaY<-30)goTo(cur-1)},50)},{passive:true});
-document.addEventListener('keydown',e=>{if(e.key==='ArrowDown'||e.key==='ArrowRight')goTo(cur+1);if(e.key==='ArrowUp'||e.key==='ArrowLeft')goTo(cur-1)});
-let ty;document.addEventListener('touchstart',e=>ty=e.touches[0].clientY,{passive:true});document.addEventListener('touchend',e=>{if(innerWidth<900)return;const d=ty-e.changedTouches[0].clientY;if(Math.abs(d)>50)goTo(cur+(d>0?1:-1))});
+
+function updateArrows(){
+  arrUp.classList.toggle('disabled',cur===0);
+  arrDown.classList.toggle('disabled',cur===sections.length-1);
+  secCounter.textContent=`${cur+1} / ${sections.length}`;
+}
+
+function goTo(idx){
+  if(idx===cur||trans||idx<0||idx>=sections.length)return;
+  trans=true;
+  const direction=idx>cur?'down':'up';
+  // Exit current section
+  sections[cur].classList.remove('active');
+  sections[cur].classList.add(direction==='down'?'exit-up':'exit-down');
+  // Enter new section
+  sections[idx].classList.add('active');
+  // Clean up exit classes after transition
+  const prev=cur;
+  setTimeout(()=>{sections[prev].classList.remove('exit-up','exit-down')},700);
+  // Update dots + nav
+  document.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('active',i===idx));
+  document.querySelectorAll('.nav-links a[data-s]').forEach(a=>a.classList.toggle('active',+a.dataset.s===idx));
+  cur=idx;
+  updateArrows();
+  setTimeout(()=>trans=false,700);
+}
+updateArrows();
+
+// Scroll — single scroll triggers, with cooldown
+let lastWheel=0;
+document.addEventListener('wheel',e=>{
+  if(innerWidth<900)return;
+  const now=Date.now();
+  if(now-lastWheel<800)return; // cooldown prevents double-trigger
+  if(Math.abs(e.deltaY)<10)return; // ignore tiny movements
+  lastWheel=now;
+  if(e.deltaY>0)goTo(cur+1);
+  else goTo(cur-1);
+},{passive:true});
+
+document.addEventListener('keydown',e=>{
+  if(e.key==='ArrowDown'||e.key==='ArrowRight'){e.preventDefault();goTo(cur+1)}
+  if(e.key==='ArrowUp'||e.key==='ArrowLeft'){e.preventDefault();goTo(cur-1)}
+});
+
+let ty;
+document.addEventListener('touchstart',e=>ty=e.touches[0].clientY,{passive:true});
+document.addEventListener('touchend',e=>{
+  if(innerWidth<900)return;
+  const d=ty-e.changedTouches[0].clientY;
+  if(Math.abs(d)>50)goTo(cur+(d>0?1:-1));
+});
 
 const now=new Date(),mos=['January','February','March','April','May','June','July','August','September','October','November','December'],dys=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 document.getElementById('rD').textContent=`${dys[now.getDay()]}, ${mos[now.getMonth()]} ${now.getDate()}, ${now.getFullYear()}`;
