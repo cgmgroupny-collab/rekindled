@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 60" fill="none">
-  <!-- Rekindled - Horizontal Logo -->
+  <!-- Vivienne - Horizontal Logo -->
   <!-- Decorative flame/asterisk mark -->
   <g transform="translate(0, 8)">
     <!-- Stylized 6-petal flower/flame mark -->
@@ -12,5 +12,5 @@
     <ellipse cx="22" cy="10" rx="2.8" ry="7" fill="#8B3A4A" transform="rotate(300, 22, 22)"/>
   </g>
   <!-- Wordmark -->
-  <text x="56" y="42" font-family="'Cormorant Garamond', 'Times New Roman', Georgia, serif" font-size="38" font-weight="500" fill="#8B3A4A" letter-spacing="-0.5">Rekindled</text>
+  <text x="56" y="42" font-family="'Cormorant Garamond', 'Times New Roman', Georgia, serif" font-size="38" font-weight="500" fill="#8B3A4A" letter-spacing="-0.5">Vivienne</text>
 </svg>

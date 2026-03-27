@@ -3,1052 +3,326 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rekindled &mdash; Sabidur&iacute;a para relaciones en la segunda mitad de la vida</title>
-<meta name="description" content="Redescubre el juego, profundiza el amor y haz el trabajo interior que mantiene vivas las relaciones. Reflexiones diarias, diario guiado, regalos curados y coaching privado para adultos maduros.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+<title>Vivienne &mdash; The Soul of Better Relationships</title>
+<meta name="description" content="Vivienne es tu compañera de sabiduría relacional con IA. Quiz de inteligencia erótica, reflexiones diarias, diario guiado, regalos curados y coaching privado para adultos.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#10045;</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-/*═══════════════════════════════════════════════════════════════════════════
-  REKINDLED — Editorial Luxury Aesthetic
-  Typography: Cormorant Garamond (display) + Crimson Pro (body) + DM Sans (UI)
-  Palette: Warm ivory, deep rose, burnished gold, warm charcoal
-═══════════════════════════════════════════════════════════════════════════*/
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#FAF6F1;--bg2:#F3EDE5;--surface:#FFFFFF;--surface2:#F8F3ED;
-  --primary:#8B3A4A;--primary-light:#A85266;--primary-pale:rgba(139,58,74,.06);
-  --gold:#C4935A;--gold-light:#D4A87A;--gold-pale:rgba(196,147,90,.08);
-  --text:#2D2926;--text2:#4A423D;--muted:#8C7E75;--faint:#B5A99E;
-  --dark:#2D2926;--dark2:#1A1715;
-  --border:rgba(139,58,74,.1);--border2:rgba(0,0,0,.06);
-  --radius:8px;--radius-lg:16px;--radius-xl:24px;
-  --shadow:0 4px 24px rgba(45,41,38,.06);--shadow-lg:0 12px 48px rgba(45,41,38,.1);
-  --max-w:1200px;
+  --bg:#0F0D0C;--bg2:#171413;--surface:#1E1B19;--surface2:#252220;
+  --rose:#C47A7A;--rose-light:#D99A9A;--rose-deep:#9E5A5A;
+  --gold:#C9A96E;--gold-light:#DBBD8A;--gold-pale:rgba(201,169,110,.08);
+  --cream:#F5EDE0;--cream2:#E8DDD0;
+  --text:#F0EBE3;--text2:#B8AFA5;--muted:#7A726A;--faint:#4A443E;
+  --border:rgba(201,169,110,.12);
+  --ff-d:'Playfair Display',Georgia,serif;
+  --ff-b:'Libre Baskerville','Times New Roman',serif;
+  --ff-u:'Outfit',system-ui,sans-serif;
 }
-html{font-size:16px;scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
-body{background:var(--bg);color:var(--text);font-family:'Crimson Pro',Georgia,serif;line-height:1.7;overflow-x:hidden}
-.serif{font-family:'Cormorant Garamond','Times New Roman',serif}
-.sans{font-family:'DM Sans',system-ui,sans-serif}
-a{color:var(--primary);text-decoration:none;transition:color .2s}
-a:hover{color:var(--gold)}
-img{max-width:100%;display:block}
-.container{max-width:var(--max-w);margin:0 auto;padding:0 24px}
+html{font-size:16px;scroll-behavior:smooth;-webkit-font-smoothing:antialiased;overflow:hidden;height:100%}
+body{background:var(--bg);color:var(--text);font-family:var(--ff-b);line-height:1.7;height:100%;overflow:hidden}
+a{color:var(--gold);text-decoration:none;transition:color .2s}a:hover{color:var(--gold-light)}
+::selection{background:var(--rose);color:#fff}
+body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");opacity:.4}
 
-/*──────────────────────────────────────────────────────────────────────────
-  NAVIGATION
-──────────────────────────────────────────────────────────────────────────*/
-.nav{
-  position:fixed;top:0;left:0;right:0;z-index:100;
-  background:rgba(250,246,241,.92);backdrop-filter:blur(16px);
-  border-bottom:1px solid var(--border2);transition:all .3s;
-}
-.nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.05)}
-.nav-inner{
-  max-width:var(--max-w);margin:0 auto;padding:0 24px;
-  display:flex;align-items:center;justify-content:space-between;height:72px;
-}
-.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600;color:var(--primary);letter-spacing:-.02em;display:flex;align-items:center;gap:8px}
-.nav-logo .flame{font-size:1.2rem;opacity:.8}
-.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
-.nav-links a{font-family:'DM Sans',sans-serif;font-size:.82rem;font-weight:500;color:var(--muted);letter-spacing:.03em;text-transform:uppercase;transition:color .2s}
-.nav-links a:hover{color:var(--primary)}
-.nav-cta{
-  font-family:'DM Sans',sans-serif;font-size:.78rem;font-weight:600;
-  background:var(--primary);color:#fff;padding:10px 24px;border-radius:100px;
-  letter-spacing:.04em;text-transform:uppercase;transition:all .2s;border:none;cursor:pointer;
-}
-.nav-cta:hover{background:var(--primary-light);color:#fff;transform:translateY(-1px);box-shadow:0 4px 16px rgba(139,58,74,.25)}
-.lang-switch{
-  font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:700;
-  color:var(--muted);letter-spacing:.06em;padding:6px 14px;
-  border:1.5px solid var(--border);border-radius:100px;transition:all .2s;
-}
-.lang-switch:hover{color:var(--primary);border-color:var(--primary);background:var(--primary-pale)}
-.mobile-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}
-.mobile-toggle svg{width:24px;height:24px;stroke:var(--text);fill:none;stroke-width:2;stroke-linecap:round}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 40px;height:64px;display:flex;align-items:center;justify-content:space-between;background:rgba(15,13,12,.85);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.04)}
+.nav-logo{font-family:var(--ff-d);font-size:1.5rem;font-weight:500;color:var(--cream);letter-spacing:.02em;display:flex;align-items:center;gap:10px;cursor:pointer}
+.nav-logo .mark{color:var(--rose);font-size:1.1rem}
+.nav-links{display:flex;align-items:center;gap:24px}
+.nav-links a{font-family:var(--ff-u);font-size:.68rem;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--cream)}
+.nav-cta{font-family:var(--ff-u);font-size:.68rem;font-weight:600;background:var(--rose);color:#fff;padding:9px 22px;border-radius:100px;letter-spacing:.06em;text-transform:uppercase;transition:all .25s;border:none;cursor:pointer}
+.nav-cta:hover{background:var(--rose-light);color:#fff;transform:translateY(-1px)}
+.lang-sw{font-family:var(--ff-u);font-size:.62rem;font-weight:600;color:var(--muted);letter-spacing:.06em;padding:4px 8px;border:1px solid var(--faint);border-radius:4px}
+.lang-sw:hover{border-color:var(--gold);color:var(--gold)}
 
-/*──────────────────────────────────────────────────────────────────────────
-  HERO
-──────────────────────────────────────────────────────────────────────────*/
-.hero{
-  min-height:100vh;display:flex;align-items:center;justify-content:center;
-  position:relative;overflow:hidden;padding:120px 24px 80px;text-align:center;
-}
-.hero::before{
-  content:'';position:absolute;inset:0;
-  background:
-    radial-gradient(ellipse at 20% 50%, rgba(139,58,74,.04) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 30%, rgba(196,147,90,.05) 0%, transparent 50%),
-    radial-gradient(ellipse at 50% 80%, rgba(139,58,74,.03) 0%, transparent 50%);
-  pointer-events:none;
-}
-.hero-content{position:relative;max-width:800px}
-.hero-label{
-  font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:600;
-  text-transform:uppercase;letter-spacing:.2em;color:var(--gold);margin-bottom:24px;
-  display:inline-flex;align-items:center;gap:8px;
-}
-.hero-label::before,.hero-label::after{content:'';width:32px;height:1px;background:var(--gold);opacity:.4}
-.hero h1{
-  font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,6vw,4.5rem);
-  font-weight:300;line-height:1.15;letter-spacing:-.03em;color:var(--text);margin-bottom:28px;
-}
-.hero h1 em{font-style:italic;color:var(--primary);font-weight:400}
-.hero-sub{
-  font-size:1.15rem;color:var(--muted);max-width:560px;margin:0 auto 40px;
-  line-height:1.8;font-weight:300;
-}
-.hero-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-.btn{
-  font-family:'DM Sans',sans-serif;font-size:.82rem;font-weight:600;
-  padding:14px 36px;border-radius:100px;cursor:pointer;transition:all .25s;
-  display:inline-flex;align-items:center;gap:8px;letter-spacing:.03em;border:none;
-}
-.btn-primary{background:var(--primary);color:#fff;box-shadow:0 4px 20px rgba(139,58,74,.2)}
-.btn-primary:hover{background:var(--primary-light);color:#fff;transform:translateY(-2px);box-shadow:0 8px 32px rgba(139,58,74,.3)}
-.btn-outline{background:transparent;color:var(--primary);border:1.5px solid var(--primary)}
-.btn-outline:hover{background:var(--primary-pale);transform:translateY(-2px)}
-.btn-gold{background:var(--gold);color:#fff;box-shadow:0 4px 20px rgba(196,147,90,.25)}
-.btn-gold:hover{background:var(--gold-light);color:#fff;transform:translateY(-2px)}
-.hero-scroll{
-  position:absolute;bottom:36px;left:50%;transform:translateX(-50%);
-  display:flex;flex-direction:column;align-items:center;gap:8px;
-  color:var(--faint);font-family:'DM Sans',sans-serif;font-size:.68rem;
-  letter-spacing:.15em;text-transform:uppercase;animation:gentleBounce 2s ease infinite;
-}
-@keyframes gentleBounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
-.hero-scroll svg{width:20px;height:20px;stroke:var(--faint);fill:none;stroke-width:1.5}
+.sections-wrapper{height:100vh;position:relative;overflow:hidden}
+.section{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:80px 40px;opacity:0;visibility:hidden;pointer-events:none;z-index:0;transition:opacity .8s ease,visibility 0s .8s;will-change:opacity;overflow-y:auto}
+.section.active{opacity:1;visibility:visible;pointer-events:auto;z-index:1;transition:opacity .8s ease,visibility 0s 0s}
+.section-inner{max-width:1100px;width:100%;margin:0 auto}
 
-/*──────────────────────────────────────────────────────────────────────────
-  DAILY REFLECTION (Free Product / Lead Magnet)
-──────────────────────────────────────────────────────────────────────────*/
-.reflection{padding:100px 24px;position:relative}
-.reflection::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:1px;
-  background:linear-gradient(90deg,transparent,var(--border),transparent);
-}
-.reflection-inner{
-  max-width:720px;margin:0 auto;text-align:center;
-}
-.section-label{
-  font-family:'DM Sans',sans-serif;font-size:.68rem;font-weight:600;
-  text-transform:uppercase;letter-spacing:.2em;color:var(--gold);margin-bottom:16px;
-}
-.reflection h2{
-  font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,4vw,2.8rem);
-  font-weight:300;line-height:1.25;letter-spacing:-.02em;margin-bottom:40px;
-}
-.reflection-card{
-  background:var(--surface);border:1px solid var(--border2);border-radius:var(--radius-xl);
-  padding:48px 40px;box-shadow:var(--shadow);position:relative;overflow:hidden;
-}
-.reflection-card::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:3px;
-  background:linear-gradient(90deg,var(--primary),var(--gold));
-}
-.reflection-date{
-  font-family:'DM Sans',sans-serif;font-size:.7rem;font-weight:600;
-  text-transform:uppercase;letter-spacing:.15em;color:var(--muted);margin-bottom:24px;
-}
-.reflection-quote{
-  font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;
-  font-style:italic;line-height:1.6;color:var(--text2);margin-bottom:24px;
-  position:relative;padding:0 20px;
-}
-.reflection-quote::before{
-  content:'\201C';position:absolute;top:-20px;left:-10px;font-size:5rem;
-  color:var(--primary);opacity:.12;font-style:normal;line-height:1;
-}
-.reflection-author{font-family:'DM Sans',sans-serif;font-size:.8rem;color:var(--muted);margin-bottom:32px}
-.reflection-prompt{
-  font-size:1.05rem;color:var(--text2);line-height:1.7;
-  padding:20px 24px;background:var(--bg);border-radius:var(--radius-lg);
-  border-left:3px solid var(--gold);text-align:left;margin-bottom:32px;
-}
-.email-capture{display:flex;gap:10px;max-width:440px;margin:0 auto}
-.email-capture input{
-  flex:1;border:1.5px solid var(--border);border-radius:100px;
-  padding:14px 24px;font-family:'Crimson Pro',serif;font-size:.95rem;
-  color:var(--text);background:var(--surface);outline:none;transition:border-color .2s;
-}
-.email-capture input:focus{border-color:var(--primary)}
-.email-capture input::placeholder{color:var(--faint)}
-.email-fine{font-family:'DM Sans',sans-serif;font-size:.68rem;color:var(--faint);margin-top:12px}
+.dots{position:fixed;right:28px;top:50%;transform:translateY(-50%);z-index:100;display:flex;flex-direction:column;gap:14px}
+.dot{width:8px;height:8px;border-radius:50%;border:1.5px solid var(--faint);background:transparent;cursor:pointer;transition:all .3s;position:relative}
+.dot:hover{border-color:var(--gold)}
+.dot.active{border-color:var(--gold);background:var(--gold);transform:scale(1.3)}
+.dot-label{position:absolute;right:20px;top:50%;transform:translateY(-50%);font-family:var(--ff-u);font-size:.58rem;font-weight:500;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;opacity:0;transition:opacity .2s;pointer-events:none}
+.dot:hover .dot-label{opacity:1}
 
-/*──────────────────────────────────────────────────────────────────────────
-  PHILOSOPHY (About)
-──────────────────────────────────────────────────────────────────────────*/
-.philosophy{padding:100px 24px;background:var(--dark);color:#fff;position:relative;overflow:hidden}
-.philosophy::before{
-  content:'';position:absolute;inset:0;
-  background:
-    radial-gradient(ellipse at 30% 50%, rgba(139,58,74,.15) 0%, transparent 60%),
-    radial-gradient(ellipse at 70% 80%, rgba(196,147,90,.08) 0%, transparent 50%);
-  pointer-events:none;
-}
-.philosophy-grid{
-  max-width:var(--max-w);margin:0 auto;display:grid;
-  grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;
-}
-.philosophy h2{
-  font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.2rem);
-  font-weight:300;line-height:1.2;letter-spacing:-.02em;margin-bottom:28px;
-}
-.philosophy h2 em{color:var(--gold);font-weight:400}
-.philosophy p{color:rgba(255,255,255,.7);line-height:1.8;margin-bottom:20px;font-weight:300}
-.philosophy-pillars{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.pillar{
-  padding:28px 24px;border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-lg);
-  background:rgba(255,255,255,.03);transition:all .3s;
-}
-.pillar:hover{border-color:rgba(196,147,90,.3);background:rgba(196,147,90,.05)}
-.pillar-icon{font-size:1.8rem;margin-bottom:12px}
-.pillar h4{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:500;margin-bottom:6px;color:#fff}
-.pillar p{font-size:.85rem;color:rgba(255,255,255,.5);margin:0;line-height:1.5}
+.hero-content{text-align:center;max-width:700px;margin:0 auto}
+.hero-ey{font-family:var(--ff-u);font-size:.6rem;font-weight:600;text-transform:uppercase;letter-spacing:.3em;color:var(--gold);margin-bottom:28px;display:flex;align-items:center;justify-content:center;gap:12px}
+.hero-ey::before,.hero-ey::after{content:'';width:40px;height:1px;background:var(--gold);opacity:.3}
+.hero-title{font-family:var(--ff-d);font-size:clamp(3rem,7vw,5.5rem);font-weight:400;line-height:1.05;letter-spacing:-.03em;margin-bottom:24px}
+.hero-title em{font-style:italic;color:var(--rose)}
+.hero-sub{font-size:1.05rem;color:var(--text2);max-width:480px;margin:0 auto 36px;line-height:1.8;font-weight:400}
+.hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn{font-family:var(--ff-u);font-size:.75rem;font-weight:600;padding:14px 34px;border-radius:100px;cursor:pointer;transition:all .25s;display:inline-flex;align-items:center;gap:8px;letter-spacing:.04em;border:none}
+.btn-r{background:var(--rose);color:#fff;box-shadow:0 4px 24px rgba(196,122,122,.2)}
+.btn-r:hover{background:var(--rose-light);color:#fff;transform:translateY(-2px);box-shadow:0 8px 36px rgba(196,122,122,.3)}
+.btn-g{background:transparent;color:var(--cream);border:1px solid var(--faint)}
+.btn-g:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
+.btn-gd{background:var(--gold);color:var(--bg);box-shadow:0 4px 24px rgba(201,169,110,.2)}
+.btn-gd:hover{background:var(--gold-light);transform:translateY(-2px)}
 
-/*──────────────────────────────────────────────────────────────────────────
-  DIGITAL PRODUCT ($14.99)
-──────────────────────────────────────────────────────────────────────────*/
-.product{padding:100px 24px;position:relative}
-.product::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:1px;
-  background:linear-gradient(90deg,transparent,var(--border),transparent);
-}
-.product-grid{
-  max-width:var(--max-w);margin:0 auto;display:grid;
-  grid-template-columns:1fr 1fr;gap:60px;align-items:center;
-}
-.product-visual{
-  position:relative;
-}
-.product-book{
-  background:linear-gradient(135deg,var(--primary),#6B2D3E);
-  border-radius:var(--radius-lg);padding:60px 40px;text-align:center;
-  color:#fff;position:relative;overflow:hidden;box-shadow:var(--shadow-lg);
-  aspect-ratio:3/4;display:flex;flex-direction:column;justify-content:center;
-  transform:perspective(800px) rotateY(-5deg);transition:transform .4s;
-}
-.product-book:hover{transform:perspective(800px) rotateY(0deg)}
-.product-book::before{
-  content:'';position:absolute;inset:0;
-  background:
-    radial-gradient(circle at 30% 20%, rgba(196,147,90,.2) 0%, transparent 50%),
-    linear-gradient(180deg, rgba(255,255,255,.05) 0%, transparent 40%);
-  pointer-events:none;
-}
-.product-book .book-label{
-  font-family:'DM Sans',sans-serif;font-size:.6rem;font-weight:700;
-  text-transform:uppercase;letter-spacing:.25em;color:var(--gold);margin-bottom:24px;
-  position:relative;
-}
-.product-book h3{
-  font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;
-  line-height:1.2;letter-spacing:-.02em;position:relative;margin-bottom:12px;
-}
-.product-book .book-sub{
-  font-family:'Crimson Pro',serif;font-size:.95rem;font-weight:300;
-  font-style:italic;opacity:.7;position:relative;
-}
-.product-book .book-author{
-  font-family:'DM Sans',sans-serif;font-size:.7rem;font-weight:500;
-  text-transform:uppercase;letter-spacing:.15em;opacity:.5;margin-top:32px;position:relative;
-}
-.product-info h2{
-  font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);
-  font-weight:300;line-height:1.25;letter-spacing:-.02em;margin-bottom:20px;
-}
-.product-info h2 em{color:var(--primary);font-weight:400}
-.product-info>p{color:var(--muted);line-height:1.8;margin-bottom:24px;font-weight:300}
-.product-features{list-style:none;margin-bottom:32px}
-.product-features li{
-  display:flex;align-items:flex-start;gap:12px;padding:10px 0;
-  border-bottom:1px solid var(--border2);font-size:.95rem;color:var(--text2);
-}
-.product-features li:last-child{border-bottom:none}
-.product-features .check{color:var(--gold);font-weight:700;flex-shrink:0;margin-top:2px}
-.product-price{
-  display:flex;align-items:baseline;gap:12px;margin-bottom:24px;
-}
-.product-price .price{
-  font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:600;color:var(--primary);
-}
-.product-price .was{
-  font-family:'DM Sans',sans-serif;font-size:.85rem;color:var(--faint);
-  text-decoration:line-through;
-}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.about-visual{aspect-ratio:3/4;background:linear-gradient(135deg,var(--rose-deep),#6B3A3A);border-radius:20px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.about-visual::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 40% 30%, rgba(201,169,110,.15) 0%, transparent 50%)}
+.about-visual .ai-name{font-family:var(--ff-d);font-size:5.5rem;font-weight:400;font-style:italic;color:rgba(255,255,255,.1);position:relative}
+.lbl{font-family:var(--ff-u);font-size:.6rem;font-weight:600;text-transform:uppercase;letter-spacing:.25em;color:var(--gold);margin-bottom:16px}
+.ttl{font-family:var(--ff-d);font-size:clamp(1.5rem,3vw,2.4rem);font-weight:400;line-height:1.2;margin-bottom:20px;letter-spacing:-.02em}
+.ttl em{color:var(--rose);font-style:italic}
+.abt-txt{color:var(--text2);line-height:1.8;margin-bottom:28px;font-size:.95rem}
+.abt-feats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.abt-f{padding:16px;border:1px solid var(--border);border-radius:12px;background:rgba(255,255,255,.02);transition:all .3s}
+.abt-f:hover{border-color:var(--rose);background:rgba(196,122,122,.04)}
+.abt-f h5{font-family:var(--ff-u);font-size:.78rem;font-weight:600;margin-bottom:4px;color:var(--cream)}
+.abt-f p{font-size:.7rem;color:var(--muted);line-height:1.4;font-family:var(--ff-u)}
 
-/*──────────────────────────────────────────────────────────────────────────
-  GIFT SHOP (Affiliate)
-──────────────────────────────────────────────────────────────────────────*/
-.shop{padding:100px 24px;background:var(--surface2);position:relative}
-.shop::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:1px;
-  background:linear-gradient(90deg,transparent,var(--border),transparent);
-}
-.shop-header{text-align:center;max-width:600px;margin:0 auto 60px}
-.shop-header h2{
-  font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,4vw,2.8rem);
-  font-weight:300;line-height:1.25;letter-spacing:-.02em;margin-bottom:16px;
-}
-.shop-header p{color:var(--muted);line-height:1.7;font-weight:300}
-.shop-categories{
-  display:flex;gap:8px;justify-content:center;margin-bottom:40px;flex-wrap:wrap;
-}
-.shop-cat{
-  font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:600;
-  text-transform:uppercase;letter-spacing:.08em;padding:10px 24px;
-  border-radius:100px;border:1.5px solid var(--border);background:transparent;
-  color:var(--muted);cursor:pointer;transition:all .2s;
-}
-.shop-cat.active,.shop-cat:hover{border-color:var(--primary);color:var(--primary);background:var(--primary-pale)}
-.shop-grid{
-  max-width:var(--max-w);margin:0 auto;
-  display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;
-}
-.gift-card{
-  background:var(--surface);border:1px solid var(--border2);border-radius:var(--radius-lg);
-  overflow:hidden;transition:all .3s;cursor:pointer;
-}
-.gift-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--border)}
-.gift-img{
-  aspect-ratio:4/3;background:var(--bg2);position:relative;overflow:hidden;
-  display:flex;align-items:center;justify-content:center;
-}
-.gift-img .gift-emoji{font-size:3.5rem;transition:transform .3s}
-.gift-card:hover .gift-emoji{transform:scale(1.15)}
-.gift-img .gift-tag{
-  position:absolute;top:12px;right:12px;font-family:'DM Sans',sans-serif;
-  font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;
-  background:var(--gold);color:#fff;padding:4px 12px;border-radius:100px;
-}
-.gift-body{padding:20px}
-.gift-body h4{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:600;margin-bottom:6px}
-.gift-body p{font-size:.85rem;color:var(--muted);line-height:1.5;margin-bottom:12px}
-.gift-footer{display:flex;align-items:center;justify-content:space-between}
-.gift-price{font-family:'DM Sans',sans-serif;font-weight:700;color:var(--primary);font-size:.9rem}
-.gift-link{
-  font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:600;
-  text-transform:uppercase;letter-spacing:.08em;color:var(--gold);
-  display:flex;align-items:center;gap:4px;
-}
+.quiz-wrap{max-width:600px;margin:0 auto;text-align:center}
+.qcard{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:44px 36px;text-align:left}
+.qprog{display:flex;gap:4px;margin-bottom:24px}
+.qp{flex:1;height:3px;border-radius:2px;background:var(--faint);transition:background .3s}
+.qp.a{background:var(--rose)}.qp.d{background:var(--gold)}
+.qq{font-family:var(--ff-d);font-size:1.25rem;font-weight:400;line-height:1.4;margin-bottom:20px;color:var(--cream)}
+.qopts{display:flex;flex-direction:column;gap:9px;margin-bottom:22px}
+.qo{padding:13px 16px;border:1px solid var(--faint);border-radius:10px;cursor:pointer;transition:all .2s;font-family:var(--ff-u);font-size:.82rem;color:var(--text2);display:flex;align-items:center;gap:11px}
+.qo:hover{border-color:var(--rose);background:rgba(196,122,122,.05)}
+.qo.s{border-color:var(--rose);background:rgba(196,122,122,.08);color:var(--cream)}
+.qo .rd{width:16px;height:16px;border-radius:50%;border:2px solid var(--faint);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.qo.s .rd{border-color:var(--rose);background:var(--rose)}
+.qo.s .rd::after{content:'';width:6px;height:6px;border-radius:50%;background:#fff}
+.qnav{display:flex;justify-content:space-between;align-items:center}
+.qsl{font-family:var(--ff-u);font-size:.65rem;color:var(--muted)}
+.qres{display:none;text-align:center}
+.qres .rt{font-family:var(--ff-u);font-size:.7rem;font-weight:600;color:var(--gold);text-transform:uppercase;letter-spacing:.12em;margin-bottom:10px}
+.qres h3{font-family:var(--ff-d);font-size:1.4rem;font-weight:400;margin-bottom:14px}
+.qres p{color:var(--text2);line-height:1.7;margin-bottom:24px;font-size:.88rem}
+.erow{display:flex;gap:8px}
+.erow input{flex:1;background:var(--bg2);border:1px solid var(--faint);border-radius:100px;padding:11px 18px;color:var(--cream);font-family:var(--ff-u);font-size:.82rem;outline:none}
+.erow input:focus{border-color:var(--gold)}
+.erow input::placeholder{color:var(--muted)}
+.efine{font-family:var(--ff-u);font-size:.6rem;color:var(--muted);margin-top:9px}
 
-/*──────────────────────────────────────────────────────────────────────────
-  SESSIONS ($249)
-──────────────────────────────────────────────────────────────────────────*/
-.sessions{padding:100px 24px;position:relative}
-.sessions::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:1px;
-  background:linear-gradient(90deg,transparent,var(--border),transparent);
-}
-.sessions-grid{
-  max-width:var(--max-w);margin:0 auto;display:grid;
-  grid-template-columns:1fr 1fr;gap:60px;align-items:center;
-}
-.sessions-info h2{
-  font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);
-  font-weight:300;line-height:1.25;letter-spacing:-.02em;margin-bottom:20px;
-}
-.sessions-info h2 em{color:var(--primary);font-weight:400}
-.sessions-info>p{color:var(--muted);line-height:1.8;margin-bottom:24px;font-weight:300}
-.session-includes{list-style:none;margin-bottom:32px}
-.session-includes li{
-  display:flex;align-items:flex-start;gap:14px;padding:14px 0;
-  border-bottom:1px solid var(--border2);
-}
-.session-includes li:last-child{border-bottom:none}
-.session-icon{
-  width:40px;height:40px;border-radius:50%;flex-shrink:0;
-  display:flex;align-items:center;justify-content:center;font-size:1.1rem;
-}
-.session-includes h5{font-family:'DM Sans',sans-serif;font-size:.88rem;font-weight:600;color:var(--text);margin-bottom:2px}
-.session-includes p{font-size:.82rem;color:var(--muted);margin:0;line-height:1.4}
-.sessions-booking{
-  background:var(--surface);border:1px solid var(--border2);border-radius:var(--radius-xl);
-  padding:48px 40px;box-shadow:var(--shadow);text-align:center;
-}
-.sessions-booking .booking-price{
-  font-family:'Cormorant Garamond',serif;font-size:3.5rem;font-weight:600;
-  color:var(--primary);margin-bottom:4px;
-}
-.sessions-booking .booking-per{
-  font-family:'DM Sans',sans-serif;font-size:.78rem;color:var(--muted);
-  text-transform:uppercase;letter-spacing:.1em;margin-bottom:24px;
-}
-.sessions-booking .booking-duration{
-  font-family:'DM Sans',sans-serif;font-size:.85rem;color:var(--text2);margin-bottom:32px;
-  display:flex;align-items:center;justify-content:center;gap:8px;
-}
-.booking-features{list-style:none;text-align:left;margin-bottom:32px}
-.booking-features li{
-  font-family:'DM Sans',sans-serif;font-size:.82rem;color:var(--text2);
-  padding:8px 0;display:flex;align-items:center;gap:10px;
-}
-.booking-features .bf-check{color:var(--gold);font-weight:700}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pcard{background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:all .3s;cursor:pointer}
+.pcard:hover{transform:translateY(-4px);border-color:var(--rose);box-shadow:0 12px 40px rgba(0,0,0,.3)}
+.pimg{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.pimg .pe{font-size:2.8rem;transition:transform .3s}.pcard:hover .pe{transform:scale(1.15)}
+.pimg .ptag{position:absolute;top:9px;right:9px;font-family:var(--ff-u);font-size:.5rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;background:var(--gold);color:var(--bg);padding:3px 9px;border-radius:100px}
+.pbody{padding:16px 18px}
+.pbody h4{font-family:var(--ff-d);font-size:1rem;font-weight:500;margin-bottom:5px;color:var(--cream)}
+.pbody p{font-size:.72rem;color:var(--muted);line-height:1.5;margin-bottom:9px;font-family:var(--ff-u)}
+.pfoot{display:flex;align-items:center;justify-content:space-between}
+.pprice{font-family:var(--ff-u);font-weight:700;color:var(--rose);font-size:.82rem}
+.plink{font-family:var(--ff-u);font-size:.6rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--gold)}
 
-/*──────────────────────────────────────────────────────────────────────────
-  TESTIMONIAL / QUOTE BAND
-──────────────────────────────────────────────────────────────────────────*/
-.quote-band{
-  padding:80px 24px;background:var(--primary);color:#fff;text-align:center;
-  position:relative;overflow:hidden;
-}
-.quote-band::before{
-  content:'';position:absolute;inset:0;
-  background:radial-gradient(ellipse at 50% 50%, rgba(196,147,90,.15) 0%, transparent 60%);
-  pointer-events:none;
-}
-.quote-band blockquote{
-  font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,3vw,2rem);
-  font-weight:300;font-style:italic;line-height:1.6;max-width:700px;margin:0 auto 20px;
-  position:relative;
-}
-.quote-band cite{
-  font-family:'DM Sans',sans-serif;font-size:.78rem;font-style:normal;
-  text-transform:uppercase;letter-spacing:.15em;opacity:.7;
-}
+.sgrid{display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:center}
+.scard{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:40px;text-align:center}
+.sprice{font-family:var(--ff-d);font-size:3.2rem;font-weight:500;color:var(--cream);margin-bottom:4px}
+.sper{font-family:var(--ff-u);font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:18px}
+.sdur{font-family:var(--ff-u);font-size:.78rem;color:var(--text2);margin-bottom:22px}
+.sf{list-style:none;text-align:left;margin-bottom:24px}
+.sf li{font-family:var(--ff-u);font-size:.76rem;color:var(--text2);padding:7px 0;display:flex;align-items:center;gap:9px;border-bottom:1px solid rgba(255,255,255,.04)}
+.sf li:last-child{border-bottom:none}
 
-/*──────────────────────────────────────────────────────────────────────────
-  NEWSLETTER FOOTER
-──────────────────────────────────────────────────────────────────────────*/
-.footer-cta{padding:80px 24px;text-align:center;background:var(--bg2)}
-.footer-cta h2{
-  font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.4rem);
-  font-weight:300;line-height:1.3;margin-bottom:16px;
-}
-.footer-cta p{color:var(--muted);margin-bottom:32px;font-weight:300;max-width:480px;margin-left:auto;margin-right:auto;margin-bottom:32px}
-.footer{
-  padding:48px 24px 32px;background:var(--dark2);color:rgba(255,255,255,.4);
-  font-family:'DM Sans',sans-serif;font-size:.78rem;
-}
-.footer-inner{
-  max-width:var(--max-w);margin:0 auto;
-  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;
-}
-.footer-logo{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:500;color:rgba(255,255,255,.7)}
-.footer-links{display:flex;gap:24px}
-.footer-links a{color:rgba(255,255,255,.4);transition:color .2s}
-.footer-links a:hover{color:var(--gold)}
+.rcard{max-width:620px;margin:0 auto;background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:44px 36px;text-align:center;position:relative;overflow:hidden}
+.rcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--rose),var(--gold))}
+.rdate{font-family:var(--ff-u);font-size:.62rem;font-weight:600;text-transform:uppercase;letter-spacing:.15em;color:var(--muted);margin-bottom:22px}
+.rquote{font-family:var(--ff-d);font-size:1.3rem;font-weight:400;font-style:italic;line-height:1.6;color:var(--cream);margin-bottom:18px;position:relative;padding:0 14px}
+.rquote::before{content:'\201C';position:absolute;top:-14px;left:-6px;font-size:3.5rem;color:var(--rose);opacity:.15;font-style:normal}
+.rauth{font-family:var(--ff-u);font-size:.7rem;color:var(--muted);margin-bottom:24px}
+.rprompt{text-align:left;padding:16px 18px;background:var(--bg2);border-radius:12px;border-left:3px solid var(--gold);margin-bottom:24px;font-size:.88rem;color:var(--text2);line-height:1.7}
 
-/*──────────────────────────────────────────────────────────────────────────
-  INTERACTIVE QUIZ / REFLECTION TOOL
-──────────────────────────────────────────────────────────────────────────*/
-.quiz{padding:100px 24px;position:relative}
-.quiz::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:1px;
-  background:linear-gradient(90deg,transparent,var(--border),transparent);
-}
-.quiz-inner{max-width:640px;margin:0 auto;text-align:center}
-.quiz h2{
-  font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);
-  font-weight:300;line-height:1.25;margin-bottom:16px;
-}
-.quiz>p{color:var(--muted);margin-bottom:40px;font-weight:300}
-.quiz-card{
-  background:var(--surface);border:1px solid var(--border2);border-radius:var(--radius-xl);
-  padding:40px;box-shadow:var(--shadow);text-align:left;
-}
-.quiz-progress{
-  display:flex;gap:4px;margin-bottom:28px;
-}
-.quiz-progress .qp-step{
-  flex:1;height:4px;border-radius:2px;background:var(--bg2);transition:background .3s;
-}
-.quiz-progress .qp-step.active{background:var(--primary)}
-.quiz-progress .qp-step.done{background:var(--gold)}
-.quiz-question{
-  font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:400;
-  line-height:1.4;margin-bottom:24px;color:var(--text);
-}
-.quiz-options{display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
-.quiz-option{
-  padding:16px 20px;border:1.5px solid var(--border);border-radius:var(--radius);
-  cursor:pointer;transition:all .2s;font-size:.92rem;color:var(--text2);
-  display:flex;align-items:center;gap:12px;
-}
-.quiz-option:hover{border-color:var(--primary);background:var(--primary-pale)}
-.quiz-option.selected{border-color:var(--primary);background:var(--primary-pale);color:var(--primary);font-weight:500}
-.quiz-option .qo-radio{
-  width:20px;height:20px;border-radius:50%;border:2px solid var(--border);flex-shrink:0;
-  display:flex;align-items:center;justify-content:center;transition:all .2s;
-}
-.quiz-option.selected .qo-radio{border-color:var(--primary);background:var(--primary)}
-.quiz-option.selected .qo-radio::after{content:'';width:8px;height:8px;border-radius:50%;background:#fff}
-.quiz-nav{display:flex;justify-content:space-between;align-items:center}
-.quiz-nav .btn{font-size:.78rem;padding:12px 28px}
-.quiz-step-label{font-family:'DM Sans',sans-serif;font-size:.72rem;color:var(--muted)}
-
-/* Quiz Result */
-.quiz-result{display:none;text-align:center}
-.quiz-result h3{
-  font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:400;margin-bottom:12px;
-}
-.quiz-result .result-type{
-  font-family:'DM Sans',sans-serif;font-size:.85rem;font-weight:600;
-  color:var(--gold);text-transform:uppercase;letter-spacing:.1em;margin-bottom:20px;
-}
-.quiz-result p{color:var(--muted);line-height:1.7;margin-bottom:28px}
-
-/*──────────────────────────────────────────────────────────────────────────
-  ANIMATIONS
-──────────────────────────────────────────────────────────────────────────*/
-.fade-in{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
-.fade-in.visible{opacity:1;transform:translateY(0)}
-.fade-in-delay-1{transition-delay:.1s}
-.fade-in-delay-2{transition-delay:.2s}
-.fade-in-delay-3{transition-delay:.3s}
-.fade-in-delay-4{transition-delay:.4s}
-
-/*──────────────────────────────────────────────────────────────────────────
-  RESPONSIVE
-──────────────────────────────────────────────────────────────────────────*/
 @media(max-width:900px){
-  .philosophy-grid,.product-grid,.sessions-grid{grid-template-columns:1fr;gap:40px}
-  .philosophy-pillars{grid-template-columns:1fr}
-  .nav-links{display:none}
-  .mobile-toggle{display:block}
-  .shop-grid{grid-template-columns:1fr 1fr}
+  .about-grid,.sgrid{grid-template-columns:1fr}
+  .pgrid{grid-template-columns:1fr 1fr}
+  .nav-links{position:fixed;top:64px;left:0;right:0;background:rgba(15,13,12,.95);backdrop-filter:blur(20px);flex-direction:column;padding:20px;gap:16px;display:none;border-bottom:1px solid var(--faint);z-index:99}
+  .nav-links.open{display:flex}
+  .hamburger{display:block!important}
+  .dots{display:none}
+  html{overflow:auto}body{overflow:auto;height:auto}
+  .sections-wrapper{height:auto;overflow:visible}
+  .section{position:relative;opacity:1;visibility:visible;min-height:100vh;padding:100px 24px}
 }
 @media(max-width:600px){
-  .hero{min-height:auto;padding:140px 20px 80px}
-  .hero h1{font-size:2.2rem}
-  .reflection-card{padding:32px 24px}
-  .sessions-booking{padding:32px 24px}
-  .email-capture{flex-direction:column}
-  .shop-grid{grid-template-columns:1fr}
-  .product-book{padding:40px 24px}
-  .hero-actions{flex-direction:column;align-items:center}
+  .pgrid{grid-template-columns:1fr}
+  .abt-feats{grid-template-columns:1fr}
+  .nav{padding:0 20px}.section{padding:80px 16px}
+  .hero-title{font-size:2.4rem}
+  .qcard{padding:28px 20px}.rcard{padding:28px 20px}.scard{padding:28px 20px}
 }
 </style>
 </head>
 <body>
 
-<!-- ═══════════ NAVIGATION ═══════════ -->
-<nav class="nav" id="mainNav">
-  <div class="nav-inner">
-    <a href="#" class="nav-logo"><span class="flame">&#10045;</span> Rekindled</a>
-    <ul class="nav-links">
-      <li><a href="#reflection">Reflexi&oacute;n Diaria</a></li>
-      <li><a href="#quiz">Tu Erotismo</a></li>
-      <li><a href="#product">Diario</a></li>
-      <li><a href="#shop">Regalos</a></li>
-      <li><a href="#sessions">Sesiones</a></li>
-      <li><a href="index.html" class="lang-switch">EN</a></li>
-    </ul>
-    <a href="index.html" style="font-family:'DM Sans',sans-serif;font-size:.75rem;font-weight:600;color:var(--muted);letter-spacing:.05em">EN</a>
-    <a href="#reflection" class="nav-cta">Comienza Gratis</a>
-    <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu">
-      <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-    </button>
+<nav class="nav">
+  <div class="nav-logo" onclick="goTo(0)"><span class="mark">&#10045;</span> Vivienne</div>
+  <div class="nav-links">
+    <a href="#" onclick="goTo(0)" class="active" data-s="0">Inicio</a>
+    <a href="#" onclick="goTo(1)" data-s="1">Sobre</a>
+    <a href="#" onclick="goTo(2)" data-s="2">Quiz</a>
+    <a href="#" onclick="goTo(3)" data-s="3">Regalos</a>
+    <a href="#" onclick="goTo(4)" data-s="4">Sesiones</a>
+    <a href="#" onclick="goTo(5)" data-s="5">Reflexión</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="#" onclick="goTo(3)" data-s="3">Tienda</a>
+    <a href="brand-board.html">Marca</a>
+    <a href="index.html" class="lang-sw">EN</a>
+  </div>
+  <div style="display:flex;align-items:center;gap:12px">
+    <a href="pricing.html" class="nav-cta">Ver Precios</a>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" style="display:none;background:none;border:1px solid var(--faint);border-radius:6px;padding:6px 8px;cursor:pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--cream)" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
   </div>
 </nav>
 
-<!-- ═══════════ HERO ═══════════ -->
-<section class="hero" id="top">
-  <div class="hero-content">
-    <div class="hero-label">Sabidur&iacute;a para la segunda mitad de la vida</div>
-    <h1>&iquest;Y si pudieras<br><em>soltar la preocupaci&oacute;n</em><br>y amar m&aacute;s profundamente?</h1>
-    <p class="hero-sub">
-      Un espacio de reflexi&oacute;n, juego y redescubrimiento. Inspirado en la sabidur&iacute;a de
-      Esther Perel y Melody Beattie &mdash; porque las mejores relaciones
-      son las que siguen <em>creciendo</em>.
-    </p>
-    <div class="hero-actions">
-      <a href="#reflection" class="btn btn-primary">Reflexi&oacute;n de Hoy</a>
-      <a href="#quiz" class="btn btn-outline">&iquest;C&oacute;mo Est&aacute; Tu Erotismo?</a>
-    </div>
-  </div>
-  <div class="hero-scroll">
-    <span>Explorar</span>
-    <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-  </div>
-</section>
+<div class="dots" id="dots"></div>
 
-<!-- ═══════════ DAILY REFLECTION ═══════════ -->
-<section class="reflection" id="reflection">
-  <div class="reflection-inner">
-    <div class="section-label fade-in">Reflexi&oacute;n Diaria Gratuita</div>
-    <h2 class="fade-in fade-in-delay-1">Un momento de sabidur&iacute;a,<br>cada ma&ntilde;ana en tu bandeja</h2>
-    <div class="reflection-card fade-in fade-in-delay-2">
-      <div class="reflection-date" id="reflectionDate"></div>
-      <div class="reflection-quote" id="reflectionQuote">
-        "What if we knew that everything that is happening and everything that has happened
-        in our life had to happen, was planned for each one of us, and is what is best for us?"
-      </div>
-      <div class="reflection-author">&mdash; Melody Beattie, <em>The Language of Letting Go</em></div>
-      <div class="reflection-prompt" id="reflectionPrompt">
-        <strong>Today's prompt:</strong> Think of one worry you carried this week.
-        What would change if you knew, with certainty, that it would resolve in the best possible way?
-        Write down what you would do differently today if that worry simply dissolved.
-      </div>
-      <div class="email-capture">
-        <input type="email" placeholder="Tu email para reflexiones diarias..." id="emailInput">
-        <button class="btn btn-primary" onclick="handleEmailSignup()">Recibir Gratis</button>
-      </div>
-      <div class="email-fine">&Uacute;nete a 2,000+ personas que empiezan sus ma&ntilde;anas con intenci&oacute;n. Cancela cuando quieras.</div>
-    </div>
-  </div>
-</section>
+<div class="sections-wrapper" id="app">
 
-<!-- ═══════════ QUOTE BAND ═══════════ -->
-<div class="quote-band">
-  <blockquote>
-    "El erotismo no es sexo. Es la poes&iacute;a que lo acompa&ntilde;a &mdash; la calidad de
-    imaginaci&oacute;n, curiosidad, juego, misterio y toma de riesgos que las personas
-    traen a su relaci&oacute;n."
-  </blockquote>
-  <cite>&mdash; Esther Perel</cite>
-</div>
-
-<!-- ═══════════ PHILOSOPHY ═══════════ -->
-<section class="philosophy" id="about">
-  <div class="philosophy-grid">
-    <div class="fade-in">
-      <div class="section-label" style="color:var(--gold)">Nuestra Filosof&iacute;a</div>
-      <h2>La relaci&oacute;n m&aacute;s importante es la que tienes<br><em>contigo mismo y con la vida</em></h2>
-      <p>
-        Creemos que el amor no disminuye con la edad &mdash; se profundiza.
-        Que soltar no es rendirse &mdash; es hacer espacio.
-        Y que jugar no es solo para los j&oacute;venes &mdash; es lo que nos mantiene <em>vivos</em>.
-      </p>
-      <p>
-        Rekindled se inspira en el trabajo de Esther Perel sobre inteligencia er&oacute;tica y
-        din&aacute;micas de pareja, y en la filosof&iacute;a transformadora de Melody Beattie
-        sobre soltar. Creamos herramientas para personas que quieren m&aacute;s que sobrevivir &mdash;
-        quieren <em>florecer</em>.
-      </p>
-    </div>
-    <div class="philosophy-pillars fade-in fade-in-delay-2">
-      <div class="pillar">
-        <div class="pillar-icon">&#10047;</div>
-        <h4>Soltar</h4>
-        <p>Libera la preocupaci&oacute;n y conf&iacute;a en que la vida se est&aacute; desplegando como debe</p>
-      </div>
-      <div class="pillar">
-        <div class="pillar-icon">&#9830;</div>
-        <h4>Inteligencia Er&oacute;tica</h4>
-        <p>Redescubre la curiosidad, el misterio y la vitalidad en tus conexiones</p>
-      </div>
-      <div class="pillar">
-        <div class="pillar-icon">&#9733;</div>
-        <h4>Juego y Humor</h4>
-        <p>El ant&iacute;doto contra la rigidez &mdash; el juego invita al cambio, el cambio invita a sanar</p>
-      </div>
-      <div class="pillar">
-        <div class="pillar-icon">&#10084;</div>
-        <h4>El Trabajo Interior</h4>
-        <p>"&iquest;Qui&eacute;n fuiste t&uacute; en esa relaci&oacute;n? &iquest;Qu&eacute; papel jugaste?"</p>
+  <!-- 0: HERO -->
+  <div class="section active" data-name="Inicio" style="background:linear-gradient(rgba(15,13,12,.7),rgba(15,13,12,.85)),url('images/hero-couple.png') center/cover no-repeat">
+    <div class="hero-content">
+      <div class="hero-ey">Tu Compañera de Sabiduría Relacional</div>
+      <h1 class="hero-title">Conoce a <em>Vivienne</em></h1>
+      <p class="hero-sub">Ella que está viva. Tu guía hacia relaciones más profundas, inteligencia erótica y el valor de soltar &mdash; inspirada en Esther Perel &amp; Melody Beattie.</p>
+      <div class="hero-actions">
+        <button class="btn btn-r" onclick="goTo(2)">¿Cómo Está Tu Erotismo?</button>
+        <a href="pricing.html" class="btn btn-g">Ver Precios</a>
       </div>
     </div>
   </div>
-</section>
 
-<!-- ═══════════ SELF-DISCOVERY QUIZ ═══════════ -->
-<section class="quiz" id="quiz">
-  <div class="quiz-inner">
-    <div class="section-label fade-in">Herramienta Gratuita de Autodescubrimiento</div>
-    <h2 class="fade-in fade-in-delay-1">&iquest;C&oacute;mo Est&aacute;<br>Tu Erotismo?</h2>
-    <p class="fade-in fade-in-delay-2">7 preguntas inspiradas en el marco de Esther Perel sobre inteligencia er&oacute;tica. Descubre qu&eacute; tan vivo est&aacute; tu fuego interior.</p>
-
-    <div class="quiz-card fade-in fade-in-delay-3" id="quizCard">
-      <div class="quiz-progress" id="quizProgress"></div>
-
-      <div id="quizBody">
-        <div class="quiz-question" id="quizQuestion"></div>
-        <div class="quiz-options" id="quizOptions"></div>
-        <div class="quiz-nav">
-          <span class="quiz-step-label" id="quizStepLabel"></span>
-          <button class="btn btn-primary" id="quizNext" onclick="nextQuestion()">Next</button>
+  <!-- 1: ABOUT -->
+  <div class="section" data-name="Sobre">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div class="about-visual" style="background:url('images/vivienne-portrait.png') center/cover"><div class="ai-name" style="text-shadow:0 2px 40px rgba(0,0,0,.5)">Vivienne</div></div>
+        <div>
+          <div class="lbl">Conoce a Tu Guía</div>
+          <div class="ttl">La amiga sabia que desearías<br>haber tenido <em>antes</em></div>
+          <p class="abt-txt">Vivienne no juzga. Hace las preguntas que importan &mdash; "¿Quién fuiste en esa relación? ¿Qué papel jugaste?" Basándose en la inteligencia erótica, el arte de soltar y décadas de sabiduría relacional.</p>
+          <div class="abt-feats">
+            <div class="abt-f"><h5>Inteligencia Erótica</h5><p>Curiosidad, misterio, riesgo &mdash; la fuerza vital en tus conexiones</p></div>
+            <div class="abt-f"><h5>Soltar</h5><p>Libera la preocupación y confía en que la vida se despliega como debe</p></div>
+            <div class="abt-f"><h5>Juego &amp; Humor</h5><p>El antídoto contra la rigidez &mdash; el juego invita a sanar</p></div>
+            <div class="abt-f"><h5>El Trabajo Interior</h5><p>Autorreflexión honesta sin culpa</p></div>
+          </div>
         </div>
       </div>
+    </div>
+  </div>
 
-      <div class="quiz-result" id="quizResult">
-        <div class="result-type" id="resultType"></div>
-        <h3 id="resultTitle"></h3>
-        <p id="resultDesc"></p>
-        <div class="email-capture" style="margin-bottom:16px">
-          <input type="email" placeholder="Recibe tu reporte completo..." id="quizEmail">
-          <button class="btn btn-gold" onclick="handleQuizEmail()">Enviar Reporte</button>
+  <!-- 2: QUIZ -->
+  <div class="section" data-name="Quiz">
+    <div class="quiz-wrap">
+      <div class="lbl">Autodescubrimiento Gratuito</div>
+      <div class="ttl" style="text-align:center;margin-bottom:28px">¿Cómo Está Tu <em>Erotismo?</em></div>
+      <div class="qcard" id="qCard">
+        <div class="qprog" id="qProg"></div>
+        <div id="qBody">
+          <div class="qq" id="qQ"></div>
+          <div class="qopts" id="qOpts"></div>
+          <div class="qnav"><span class="qsl" id="qStep"></span><button class="btn btn-r" id="qNext" onclick="nextQ()" style="font-size:.7rem;padding:10px 24px">Next</button></div>
         </div>
-        <div class="email-fine">Te enviaremos tu an&aacute;lisis detallado de inteligencia er&oacute;tica gratis</div>
+        <div class="qres" id="qRes">
+          <div class="rt" id="rType"></div>
+          <h3 id="rTitle"></h3>
+          <p id="rDesc"></p>
+          <div class="erow"><input type="email" placeholder="Recibe tu reporte completo..." id="qEmail"><button class="btn btn-gd" style="font-size:.7rem;padding:10px 20px" onclick="qE()">Enviar</button></div>
+          <div class="efine">Análisis detallado de inteligencia erótica gratis de Vivienne</div>
+        </div>
       </div>
     </div>
   </div>
-</section>
 
-<!-- ═══════════ DIGITAL PRODUCT ═══════════ -->
-<section class="product" id="product">
-  <div class="product-grid">
-    <div class="product-visual fade-in">
-      <div class="product-book">
-        <div class="book-label">Producto Digital</div>
-        <h3>El Diario del Trabajo Interior</h3>
-        <div class="book-sub">Un viaje guiado hacia una conexi&oacute;n m&aacute;s profunda</div>
-        <div class="book-author">por Rekindled</div>
+  <!-- 3: GIFTS + JOURNAL -->
+  <div class="section" data-name="Tienda">
+    <div class="section-inner">
+      <div style="text-align:center;margin-bottom:44px">
+        <div class="lbl">Curado por Vivienne</div>
+        <div class="ttl">Regalos que hablan más fuerte que las <em>palabras</em></div>
       </div>
-    </div>
-    <div class="product-info fade-in fade-in-delay-2">
-      <div class="section-label">Producto Digital</div>
-      <h2>El diario guiado para quienes quieren<br><em>amar con m&aacute;s honestidad</em></h2>
-      <p>
-        30 d&iacute;as de prompts, ejercicios y reflexiones basados en la sabidur&iacute;a de
-        expertos en relaciones. Dise&ntilde;ado para individuos y parejas que creen que
-        las mejores relaciones requieren un trabajo interior honesto.
-      </p>
-      <ul class="product-features">
-        <li><span class="check">&#10003;</span> 30 prompts diarios guiados basados en el marco de din&aacute;micas de Perel</li>
-        <li><span class="check">&#10003;</span> Ejercicios de autorreflexi&oacute;n "&iquest;Qui&eacute;n fuiste t&uacute;?" despu&eacute;s de cada cap&iacute;tulo</li>
-        <li><span class="check">&#10003;</span> Retos de juego y curiosidad para reavivar la conexi&oacute;n</li>
-        <li><span class="check">&#10003;</span> Meditaciones de soltar inspiradas en Melody Beattie</li>
-        <li><span class="check">&#10003;</span> Baraja imprimible: 52 preguntas para iniciar conversaciones de pareja</li>
-        <li><span class="check">&#10003;</span> Descarga digital instant&aacute;nea (PDF + versi&oacute;n interactiva)</li>
-      </ul>
-      <div class="product-price">
-        <span class="price">$14.99</span>
-        <span class="was">$29.99</span>
-      </div>
-      <a href="#" class="btn btn-primary" onclick="alert('Integraci&oacute;n de pago pr&oacute;ximamente!')">Obtener El Diario</a>
+      <div class="pgrid" id="shopGrid"></div>
     </div>
   </div>
-</section>
 
-<!-- ═══════════ GIFT SHOP ═══════════ -->
-<section class="shop" id="shop">
-  <div class="shop-header fade-in">
-    <div class="section-label">Tienda de Regalos Curada</div>
-    <h2>Regalos extravagantes para quien<br><em>merece sentirse apreciado</em></h2>
-    <p>Regalos de lujo seleccionados a mano que dicen m&aacute;s que las palabras. Cada compra apoya nuestra misi&oacute;n de conexi&oacute;n m&aacute;s profunda.</p>
-  </div>
-
-  <div class="shop-categories fade-in fade-in-delay-1">
-    <button class="shop-cat active" onclick="filterGifts('all',this)">Todos</button>
-    <button class="shop-cat" onclick="filterGifts('romantic',this)">Rom&aacute;nticos</button>
-    <button class="shop-cat" onclick="filterGifts('self-care',this)">Autocuidado</button>
-    <button class="shop-cat" onclick="filterGifts('experience',this)">Experiencias</button>
-    <button class="shop-cat" onclick="filterGifts('home',this)">Hogar</button>
-  </div>
-
-  <div class="shop-grid fade-in fade-in-delay-2" id="shopGrid">
-    <!-- Populated by JS -->
-  </div>
-</section>
-
-<!-- ═══════════ SESSIONS ═══════════ -->
-<section class="sessions" id="sessions">
-  <div class="sessions-grid">
-    <div class="sessions-info fade-in">
-      <div class="section-label">Sesiones Privadas</div>
-      <h2>Gu&iacute;a uno a uno para tu<br><em>relaci&oacute;n m&aacute;s importante</em></h2>
-      <p>
-        Ya sea que est&eacute;s navegando una transici&oacute;n, reconstruyendo despu&eacute;s de una p&eacute;rdida,
-        o simplemente quieras profundizar lo que ya tienes &mdash; estas sesiones
-        ofrecen un espacio seguro y guiado para claridad transformadora.
-      </p>
-      <ul class="session-includes">
-        <li>
-          <div class="session-icon" style="background:var(--primary-pale)">&#128172;</div>
-          <div>
-            <h5>Auditor&iacute;a Profunda de Relaci&oacute;n</h5>
-            <p>Comprende tus patrones, din&aacute;micas y &aacute;reas de crecimiento</p>
+  <!-- 4: SESSIONS -->
+  <div class="section" data-name="Sesiones" style="background:linear-gradient(rgba(15,13,12,.75),rgba(15,13,12,.9)),url('images/hands-intimate.png') center/cover no-repeat">
+    <div class="section-inner">
+      <div class="sgrid">
+        <div>
+          <div class="lbl">Sesiones Privadas</div>
+          <div class="ttl">Guía uno a uno para tu<br><em>relación más importante</em></div>
+          <p class="abt-txt">Ya sea que navegues una transición, reconstruyas después de una pérdida o profundices lo que tienes &mdash; Vivienne ofrece un espacio seguro y guiado para claridad transformadora.</p>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="display:flex;align-items:center;gap:10px"><span style="color:var(--gold)">&#10003;</span><span style="font-family:var(--ff-u);font-size:.82rem;color:var(--text2)">Auditoría profunda de relación y análisis de patrones</span></div>
+            <div style="display:flex;align-items:center;gap:10px"><span style="color:var(--gold)">&#10003;</span><span style="font-family:var(--ff-u);font-size:.82rem;color:var(--text2)">Plan de acción personalizado que empiezas hoy</span></div>
+            <div style="display:flex;align-items:center;gap:10px"><span style="color:var(--gold)">&#10003;</span><span style="font-family:var(--ff-u);font-size:.82rem;color:var(--text2)">Seguimiento por email de 7 días con Vivienne</span></div>
+            <div style="display:flex;align-items:center;gap:10px"><span style="color:var(--gold)">&#10003;</span><span style="font-family:var(--ff-u);font-size:.82rem;color:var(--text2)">Free copy of El Trabajo Interior Journal</span></div>
           </div>
-        </li>
-        <li>
-          <div class="session-icon" style="background:var(--gold-pale)">&#128161;</div>
-          <div>
-            <h5>Plan de Acci&oacute;n Personalizado</h5>
-            <p>Sal con pasos concretos adaptados a tu situaci&oacute;n</p>
-          </div>
-        </li>
-        <li>
-          <div class="session-icon" style="background:var(--primary-pale)">&#128214;</div>
-          <div>
-            <h5>Recursos de Seguimiento</h5>
-            <p>Lista de lectura curada, ejercicios y reflexiones guiadas</p>
-          </div>
-        </li>
-        <li>
-          <div class="session-icon" style="background:var(--gold-pale)">&#128274;</div>
-          <div>
-            <h5>Completamente Confidencial</h5>
-            <p>Un espacio libre de juicios para explorar con honestidad</p>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <div class="fade-in fade-in-delay-2">
-      <div class="sessions-booking">
-        <div class="booking-price">$249</div>
-        <div class="booking-per">por sesi&oacute;n</div>
-        <div class="booking-duration">&#9200; 90 minutos &middot; Video o Tel&eacute;fono</div>
-        <ul class="booking-features">
-          <li><span class="bf-check">&#10003;</span> Cuestionario previo para maximizar tu tiempo</li>
-          <li><span class="bf-check">&#10003;</span> Sesi&oacute;n profunda de 90 minutos por Zoom</li>
-          <li><span class="bf-check">&#10003;</span> Resumen grabado y plan de acci&oacute;n</li>
-          <li><span class="bf-check">&#10003;</span> Seguimiento por email durante 7 d&iacute;as</li>
-          <li><span class="bf-check">&#10003;</span> Copia gratis del Diario del Trabajo Interior (valor $14.99)</li>
-        </ul>
-        <a href="#" class="btn btn-primary" style="width:100%;justify-content:center" onclick="alert('Calendario de reservas pr&oacute;ximamente!')">Reserva Tu Sesi&oacute;n</a>
-        <div style="font-family:'DM Sans',sans-serif;font-size:.7rem;color:var(--faint);margin-top:12px">Disponibilidad limitada &middot; Pr&oacute;xima apertura en 3 d&iacute;as</div>
+        </div>
+        <div class="scard">
+          <div class="sprice">$249</div>
+          <div class="sper">por sesión</div>
+          <div class="sdur">&#9200; 90 min &middot; Zoom o Teléfono</div>
+          <button class="btn btn-r" style="width:100%;justify-content:center" onclick="alert('¡Calendario de reservas próximamente!')">Reserva Tu Sesión</button>
+          <div style="font-family:var(--ff-u);font-size:.62rem;color:var(--muted);margin-top:10px">Disponibilidad limitada</div>
+        </div>
       </div>
     </div>
   </div>
-</section>
 
-<!-- ═══════════ SECOND QUOTE BAND ═══════════ -->
-<div class="quote-band" style="background:var(--dark)">
-  <blockquote>
-    "Hoy sabr&eacute; que no tengo que preocuparme por nada. Si me preocupo,
-    lo har&eacute; con el entendimiento de que estoy eligiendo preocuparme, y que esto no es necesario."
-  </blockquote>
-  <cite>&mdash; Melody Beattie, El Lenguaje del Adi&oacute;s</cite>
+  <!-- 5: DAILY REFLECTION -->
+  <div class="section" data-name="Reflexión" style="background:linear-gradient(rgba(15,13,12,.8),rgba(15,13,12,.9)),url('images/reflection-morning.png') center/cover no-repeat">
+    <div style="max-width:620px;margin:0 auto;text-align:center">
+      <div class="lbl">Reflexión Diaria Gratuita</div>
+      <div class="ttl" style="margin-bottom:28px">Un momento de sabiduría,<br>cada <em>mañana</em></div>
+      <div class="rcard">
+        <div class="rdate" id="rD"></div>
+        <div class="rquote" id="rQ"></div>
+        <div class="rauth" id="rA"></div>
+        <div class="rprompt" id="rP"></div>
+        <div class="erow"><input type="email" placeholder="Tu email..." id="rEmail"><button class="btn btn-gd" style="font-size:.7rem;padding:10px 20px" onclick="rSign()">Recibir Gratis</button></div>
+        <div class="efine">Únete a 2,000+ que empiezan sus mañanas con Vivienne. Cancela cuando quieras.</div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
-<!-- ═══════════ FOOTER CTA ═══════════ -->
-<section class="footer-cta">
-  <h2 class="serif fade-in">Empieza tus ma&ntilde;anas diferente</h2>
-  <p class="fade-in fade-in-delay-1">&Uacute;nete a miles que reciben una dosis diaria de sabidur&iacute;a relacional, prompts de reflexi&oacute;n y el valor para soltar.</p>
-  <div class="email-capture fade-in fade-in-delay-2" style="max-width:440px;margin:0 auto">
-    <input type="email" placeholder="Tu correo electr&oacute;nico...">
-    <button class="btn btn-gold">Suscr&iacute;bete Gratis</button>
-  </div>
-</section>
-
-<!-- ═══════════ FOOTER ═══════════ -->
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-logo">&#10045; Rekindled</div>
-    <div class="footer-links">
-      <a href="#reflection">Reflexi&oacute;n Diaria</a>
-      <a href="#product">Diario</a>
-      <a href="#shop">Regalos</a>
-      <a href="#sessions">Sesiones</a>
-      <a href="#">Privacidad</a>
-    </div>
-    <div>&copy; 2026 Rekindled. All rights reserved.</div>
-  </div>
-</footer>
-
-<!-- ═══════════════════════════════════════════════════════════════════════════
-  JAVASCRIPT
-═══════════════════════════════════════════════════════════════════════════ -->
 <script>
-/* ─── NAV SCROLL ─── */
-window.addEventListener('scroll', () => {
-  document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 40);
-});
+const sections=document.querySelectorAll('.section');let cur=0,trans=false;
+const dotsEl=document.getElementById('dots');
+sections.forEach((s,i)=>{const d=document.createElement('div');d.className='dot'+(i===0?' active':'');d.onclick=()=>goTo(i);d.innerHTML=`<span class="dot-label">${s.dataset.name}</span>`;dotsEl.appendChild(d)});
+function goTo(idx){if(idx===cur||trans||idx<0||idx>=sections.length)return;trans=true;sections[cur].classList.remove('active');sections[idx].classList.add('active');document.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('active',i===idx));document.querySelectorAll('.nav-links a[data-s]').forEach(a=>a.classList.toggle('active',+a.dataset.s===idx));cur=idx;setTimeout(()=>trans=false,800)}
+let wt;document.addEventListener('wheel',e=>{if(innerWidth<900)return;clearTimeout(wt);wt=setTimeout(()=>{if(e.deltaY>30)goTo(cur+1);else if(e.deltaY<-30)goTo(cur-1)},50)},{passive:true});
+document.addEventListener('keydown',e=>{if(e.key==='ArrowDown'||e.key==='ArrowRight')goTo(cur+1);if(e.key==='ArrowUp'||e.key==='ArrowLeft')goTo(cur-1)});
+let ty;document.addEventListener('touchstart',e=>ty=e.touches[0].clientY,{passive:true});document.addEventListener('touchend',e=>{if(innerWidth<900)return;const d=ty-e.changedTouches[0].clientY;if(Math.abs(d)>50)goTo(cur+(d>0?1:-1))});
 
-/* ─── DATE ─── */
-const now = new Date();
-const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-document.getElementById('reflectionDate').textContent =
-  `${days[now.getDay()]}, ${months[now.getMonth()]} ${now.getDate()}, ${now.getFullYear()}`;
+const now=new Date(),mos=['January','February','March','April','May','June','July','August','September','October','November','December'],dys=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+document.getElementById('rD').textContent=`${dys[now.getDay()]}, ${mos[now.getMonth()]} ${now.getDate()}, ${now.getFullYear()}`;
+const REFL=[{q:"¿Qué tal si todo lo que está ocurriendo en nuestra vida ha tenido que pasar, fue planeado para nosotros y es lo que más nos conviene?",a:"Melody Beattie, The Language of Soltar",p:"Piensa en una preocupación que cargaste esta semana. ¿Qué cambiaría si supieras que se resolverá perfectamente?"},{q:"Una relación no se trata de esta persona y aquella persona. Es lo que sucede en el medio. Es la dinámica.",a:"Esther Perel",p:"¿Qué dinámica estás creando en tu relación más importante? ¿Qué estás enviando que provoca su respuesta?"},{q:"El humor y el juego son posibilidad. La posibilidad invita al cambio. El cambio invita a sanar.",a:"Esther Perel",p:"¿Cuándo fue la última vez que jugaste de verdad con un ser querido? Planea un momento juguetón hoy."},{q:"¿Qué tal si las personas que amamos están experimentando exactamente lo que necesitan para convertirse en lo que estaban destinadas a ser?",a:"Melody Beattie, The Language of Soltar",p:"¿Hay alguien a quien estás intentando arreglar? ¿Qué cambia si confías en su camino?"},{q:"El erotismo es la poesía que lo acompaña. La calidad de imaginación, curiosidad, juego, misterio y toma de riesgos.",a:"Esther Perel",p:"¿En qué área dejaste de ser curioso? Aborda una hoy con ojos de principiante."},{q:"Puedes asumir responsabilidad sin culparte, y hacer responsable al otro sin culparlo.",a:"Esther Perel",p:"Nombra tu papel en un conflicto pasado sin auto-culpa. Nombra el suyo sin acusación."},{q:"Hoy sabré que no tengo que preocuparme por nada. Si me preocupo, elijo preocuparme, y no es necesario.",a:"Melody Beattie, The Language of Soltar",p:"Escribe tres preocupaciones. Para cada una: 'Suelto esto, confiando en que se resolverá de la mejor manera.'"}];
+const r=REFL[now.getDay()%REFL.length];document.getElementById('rQ').textContent=`"${r.q}"`;document.getElementById('rA').innerHTML=`&mdash; ${r.a}`;document.getElementById('rP').innerHTML=`<strong>Vivienne pregunta:</strong> ${r.p}`;
 
-/* ─── DAILY REFLECTIONS (rotate) ─── */
-const REFLECTIONS = [
-  {
-    quote: "\u00bfQu\u00e9 tal si supi\u00e9ramos que todo lo que est\u00e1 ocurriendo y todo lo que ha ocurrido en nuestra vida ha tenido que pasar, ha sido planeado para cada uno de nosotros y es lo que m\u00e1s nos conviene?",
-    author: "Melody Beattie, El Lenguaje del Adi\u00f3s",
-    prompt: "Piensa en una preocupaci\u00f3n que cargaste esta semana. \u00bfQu\u00e9 cambiar\u00eda si supieras, con certeza, que se resolver\u00e1 de la mejor manera posible? Escribe qu\u00e9 har\u00edas diferente hoy."
-  },
-  {
-    quote: "Una relaci\u00f3n no se trata de esta persona y aquella persona. La relaci\u00f3n es lo que sucede en el medio. Es la din\u00e1mica.",
-    author: "Esther Perel",
-    prompt: "Reflexiona sobre tu relaci\u00f3n m\u00e1s importante ahora. En lugar de pensar en lo que hace la otra persona, pregunta: \u00bfQu\u00e9 din\u00e1mica estoy creando yo? \u00bfQu\u00e9 estoy enviando que provoca su respuesta?"
-  },
-  {
-    quote: "El humor y el juego son posibilidad. La posibilidad invita al cambio. El cambio invita a sanar.",
-    author: "Esther Perel",
-    prompt: "\u00bfCu\u00e1ndo fue la \u00faltima vez que jugaste de verdad con tu pareja o un ser querido? No algo agradable y familiar, sino algo nuevo y un poco arriesgado. Planea un momento juguet\u00f3n hoy."
-  },
-  {
-    quote: "\u00bfQu\u00e9 tal si tuvi\u00e9ramos la garant\u00eda de que la gente que amamos est\u00e1 experimentando exactamente lo que necesita para convertirse en aquello que estaba destinada a convertirse?",
-    author: "Melody Beattie, El Lenguaje del Adi\u00f3s",
-    prompt: "\u00bfHay alguien a quien est\u00e1s intentando controlar o arreglar? Escribe qu\u00e9 cambiar\u00eda si confiaras en que su camino se est\u00e1 desplegando perfectamente, aunque parezca desordenado desde donde t\u00fa est\u00e1s."
-  },
-  {
-    quote: "El erotismo es la poes\u00eda que lo acompa\u00f1a. Es el significado que le damos. Es la calidad de imaginaci\u00f3n, curiosidad, juego, misterio y toma de riesgos.",
-    author: "Esther Perel",
-    prompt: "El erotismo no se trata de sexo \u2014 se trata de estar vivo. \u00bfEn qu\u00e9 \u00e1rea de tu vida dejaste de ser curioso? Elige una y aborda hoy con los ojos de un principiante absoluto."
-  },
-  {
-    quote: "Puedes asumir responsabilidad por las cosas sin culparte a ti mismo, y puedes hacer responsable a la otra persona sin culparla.",
-    author: "Esther Perel",
-    prompt: "Piensa en un conflicto pasado. \u00bfPuedes nombrar tu papel sin auto-culpa? \u00bfPuedes nombrar el suyo sin acusaci\u00f3n? Escribe ambos lados con compasi\u00f3n."
-  },
-  {
-    quote: "Hoy sabr\u00e9 que no tengo que preocuparme por nada. Si me preocupo, lo har\u00e9 con el entendimiento de que estoy eligiendo preocuparme, y que esto no es necesario.",
-    author: "Melody Beattie, El Lenguaje del Adi\u00f3s",
-    prompt: "Escribe tres cosas que te preocupan ahora. Para cada una, escribe: 'Elijo soltar esta preocupaci\u00f3n, confiando en que se resolver\u00e1 de la mejor manera posible y en el momento adecuado.'"
-  }
+const QUIZ=[{q:"¿Cuándo fue la última vez que sentiste verdadera curiosidad por tu pareja?",o:["Hace mucho... ya nos conocemos demasiado bien","A veces, cuando rompemos la rutina","Often \u2014 always something new","No recuerdo la última vez"]},{q:"¿Cómo describirías el juego en tu vida íntima?",o:["It barely exists \u2014 everything is serious","Aparece a veces pero se desvanece","Es parte natural de cómo nos conectamos","Me gustaría más pero me da miedo"]},{q:"Cuando piensas en 'erotismo', ¿qué viene primero?",o:["Sex and physical attraction","Algo que se pierde con el tiempo","Imagination, mystery, risk \u2014 a life force","Algo que no he explorado lo suficiente"]},{q:"¿Con qué frecuencia sales de tu zona de confort en el amor?",o:["Almost never \u2014 I prefer safety","Cuando mi pareja lo propone","Regularly \u2014 risk keeps things alive","Solía hacerlo, pero ya no"]},{q:"¿Cuánto misterio existe en tu relación más cercana?",o:["None \u2014 we know everything","Little \u2014 living together kills it","Quite a bit \u2014 we keep space","No he pensado en eso"]},{q:"Cuando hay tensión, ¿qué papel juega el humor?",o:["Zero \u2014 everything gets serious","Intento reírme pero me cuesta","El humor es mi primera herramienta para reconectarnos","Me río solo, no con mi pareja"]},{q:"¿Qué reavivaría más la energía en tu relación?",o:["Que mi pareja cambie","Hacer mi propio trabajo interior primero","Aprender a jugar y arriesgar juntos","Simplemente más tiempo, menos estrés"]}];
+let cQ=0,ans=[];
+function renderQ(){document.getElementById('qProg').innerHTML=QUIZ.map((_,i)=>`<div class="qp ${i<cQ?'d':''} ${i===cQ?'a':''}"></div>`).join('');document.getElementById('qQ').textContent=QUIZ[cQ].q;document.getElementById('qOpts').innerHTML=QUIZ[cQ].o.map((o,i)=>`<div class="qo ${ans[cQ]===i?'s':''}" onclick="selO(${i})"><div class="rd"></div>${o}</div>`).join('');document.getElementById('qStep').textContent=`Pregunta ${cQ+1} de ${QUIZ.length}`;document.getElementById('qNext').textContent=cQ===QUIZ.length-1?'Ver Resultados':'Siguiente'}
+function selO(i){ans[cQ]=i;document.querySelectorAll('.qo').forEach((el,j)=>el.classList.toggle('s',j===i))}
+function nextQ(){if(ans[cQ]===undefined)return;if(cQ<QUIZ.length-1){cQ++;renderQ()}else{document.getElementById('qBody').style.display='none';const res=document.getElementById('qRes');res.style.display='block';const types=[{t:'Llama Dormida',h:'Tu erotismo está en pausa, no apagado',d:'La rutina cubrió tu fuego con cenizas \u2014 but the flame is there. Start small: one question you\'ve never asked, one tiny risk.'},{t:'Fuego Controlado',h:'Tu erotismo existe, pero lo mantienes a raya',d:'You want deep connection but something holds back. Letting go isn\'t giving up, it\'s making room. Practice playing without agenda.'},{t:'Chispa Curiosa',h:'Tu erotismo está vivo y creciendo',d:'Sabes que el erotismo es más que sexo. Siguiente paso: ¿qué riesgo emocional puedes tomar esta semana con alguien que amas?'},{t:'Llama Viva',h:'Tu erotismo es una fuerza vital activa',d:'Play, humor, curiosity \u2014 that\'s how you love. You understand the figure eight. Keep going deeper.'}];const ti=ans.reduce((a,b)=>a+b,0)%types.length;document.getElementById('rType').textContent=types[ti].t;document.getElementById('rTitle').textContent=types[ti].h;document.getElementById('rDesc').textContent=types[ti].d}}
+renderQ();
+function qE(){const e=document.getElementById('qEmail').value;if(!e||!e.includes('@'))return alert('Por favor ingresa un email válido.');alert(`Tu análisis de inteligencia erótica de Vivienne será enviado a ${e}`)}
+function rSign(){const e=document.getElementById('rEmail').value;if(!e||!e.includes('@'))return alert('Por favor ingresa un email válido.');alert(`¡Bienvenido! La primera reflexión de Vivienne llega mañana a ${e}`)}
+
+const GIFTS=[
+  {n:'El Trabajo Interior Journal',d:'Diario guiado de 30 días + 52 tarjetas de conversación para parejas.',p:'$14.99',e:'',tag:'Digital',bg:'url(images/journal-product.png) center/cover'},
+  {n:'Experiencia de Masaje en Pareja',d:'Día lujoso de spa para dos con aromaterapia y suite privada.',p:'$189\u2013$450',e:'&#128134;',tag:'Popular',bg:'linear-gradient(135deg,#3A4A3A,#2A3A2A)'},
+  {n:'Bata de Seda y Antifaz',d:'Seda de morera en champagne o azul noche.',p:'$175',e:'',tag:'Más Vendido',bg:'url(images/gift-box.png) center/cover'},
+  {n:'Escapada de Fin de Semana',d:'Hotel boutique + cena. Elige tu destino.',p:'$400\u2013$800',e:'&#9992;&#65039;',tag:'Premium',bg:'linear-gradient(135deg,#4A3A2A,#3A2A1A)'},
+  {n:'Mapa Estelar Personalizado',d:'El cielo nocturno en la fecha que se conocieron. Marco de museo.',p:'$95',e:'&#11088;',tag:'Popular',bg:'linear-gradient(135deg,#1A2A3A,#0A1A2A)'},
+  {n:'Noche de Estrellas Privada',d:'Telescopio privado, guía, champagne bajo las estrellas.',p:'$220',e:'&#128301;',tag:'',bg:'linear-gradient(135deg,#2A2A3A,#1A1A2A)'}
 ];
-
-// Show today's reflection
-const todayIdx = now.getDay();
-const ref = REFLECTIONS[todayIdx % REFLECTIONS.length];
-document.getElementById('reflectionQuote').innerHTML = `"${ref.quote}"`;
-document.getElementById('reflectionPrompt').innerHTML = `<strong>Today's prompt:</strong> ${ref.prompt}`;
-document.querySelector('.reflection-author').innerHTML = `&mdash; ${ref.author}`;
-
-/* ─── QUIZ ─── */
-const QUIZ = [
-  {
-    q: "\u00bfCu\u00e1ndo fue la \u00faltima vez que sentiste verdadera curiosidad por tu pareja \u2014 no por obligaci\u00f3n, sino por deseo genuino de descubrir algo nuevo?",
-    opts: ["Hace mucho... ya nos conocemos demasiado bien", "A veces, cuando hacemos algo fuera de la rutina", "Con frecuencia \u2014 siempre hay algo nuevo que descubrir", "No recuerdo la \u00faltima vez"]
-  },
-  {
-    q: "\u00bfC\u00f3mo describes el papel del juego y la espontaneidad en tu vida \u00edntima?",
-    opts: ["Pr\u00e1cticamente no existe \u2014 todo es serio y rutinario", "Aparece a veces, pero nos cuesta mantenerlo", "Es parte natural de c\u00f3mo nos conectamos", "Me gustar\u00eda m\u00e1s, pero me da verg\u00fcenza o miedo"]
-  },
-  {
-    q: "Cuando piensas en \u2018erotismo\u2019, \u00bfqu\u00e9 viene primero a tu mente?",
-    opts: ["Solo sexo y atracci\u00f3n f\u00edsica", "Algo que se pierde con el tiempo", "Imaginaci\u00f3n, misterio, riesgo \u2014 una energ\u00eda vital", "Algo que no he explorado lo suficiente"]
-  },
-  {
-    q: "\u00bfCon qu\u00e9 frecuencia te atreves a hacer algo ligeramente fuera de tu zona de confort en una relaci\u00f3n?",
-    opts: ["Casi nunca \u2014 prefiero lo seguro y predecible", "Cuando mi pareja lo propone, yo sigo", "Regularmente \u2014 creo que el riesgo es necesario", "Sol\u00eda hacerlo, pero ya no tanto"]
-  },
-  {
-    q: "En tu relaci\u00f3n m\u00e1s importante, \u00bfqu\u00e9 tanto espacio hay para el misterio?",
-    opts: ["Ninguno \u2014 lo sabemos todo el uno del otro", "Poco \u2014 la convivencia lo elimina", "Bastante \u2014 cultivamos espacios individuales", "No he pensado en eso antes"]
-  },
-  {
-    q: "\u00bfC\u00f3mo manejas el humor cuando hay tensi\u00f3n en tu relaci\u00f3n?",
-    opts: ["No hay humor cuando hay problemas \u2014 todo es serio", "A veces logro re\u00edrme, pero me cuesta", "El humor es mi primera herramienta para reconectarnos", "Me r\u00edo solo, pero no con mi pareja en esos momentos"]
-  },
-  {
-    q: "\u00bfQu\u00e9 crees que reavivar\u00eda m\u00e1s la energ\u00eda vital en tu relaci\u00f3n?",
-    opts: ["Que mi pareja cambie o mejore ciertas cosas", "Hacer mi propio trabajo interior primero", "Aprender a jugar, arriesgar y ser curiosos juntos", "Simplemente m\u00e1s tiempo y menos estr\u00e9s"]
-  }
-];
-
-let currentQ = 0;
-let answers = [];
-
-function renderQuiz() {
-  const progress = document.getElementById('quizProgress');
-  progress.innerHTML = QUIZ.map((_, i) =>
-    `<div class="qp-step ${i < currentQ ? 'done' : ''} ${i === currentQ ? 'active' : ''}"></div>`
-  ).join('');
-
-  const q = QUIZ[currentQ];
-  document.getElementById('quizQuestion').textContent = q.q;
-  document.getElementById('quizOptions').innerHTML = q.opts.map((opt, i) =>
-    `<div class="quiz-option ${answers[currentQ] === i ? 'selected' : ''}" onclick="selectOption(${i})">
-      <div class="qo-radio"></div>
-      ${opt}
-    </div>`
-  ).join('');
-  document.getElementById('quizStepLabel').textContent = `Pregunta ${currentQ + 1} de ${QUIZ.length}`;
-  document.getElementById('quizNext').textContent = currentQ === QUIZ.length - 1 ? 'Ver Resultados' : 'Siguiente';
-}
-
-function selectOption(idx) {
-  answers[currentQ] = idx;
-  document.querySelectorAll('.quiz-option').forEach((el, i) => {
-    el.classList.toggle('selected', i === idx);
-  });
-}
-
-function nextQuestion() {
-  if (answers[currentQ] === undefined) return;
-  if (currentQ < QUIZ.length - 1) {
-    currentQ++;
-    renderQuiz();
-  } else {
-    showResults();
-  }
-}
-
-function showResults() {
-  document.getElementById('quizBody').style.display = 'none';
-  const result = document.getElementById('quizResult');
-  result.style.display = 'block';
-
-  // Tipos de erotismo
-  const types = [
-    { type: 'Llama Dormida', title: 'Tu erotismo est\u00e1 en pausa, no apagado', desc: 'La rutina y las responsabilidades han cubierto tu fuego interior con cenizas. Pero la llama sigue ah\u00ed. Tu camino: redescubrir la curiosidad. Empieza con algo peque\u00f1o \u2014 una pregunta que nunca le has hecho a tu pareja, un riesgo m\u00ednimo que te haga sentir vivo de nuevo.' },
-    { type: 'Fuego Controlado', title: 'Tu erotismo existe, pero lo mantienes a raya', desc: 'Sientes el deseo de conexi\u00f3n profunda, pero algo te frena \u2014 quiz\u00e1s el control, quiz\u00e1s la verg\u00fcenza. Como dice Beattie: soltar no es rendirse, es hacer espacio. Tu camino: practicar el soltar y permitirte jugar sin agenda.' },
-    { type: 'Chispa Curiosa', title: 'Tu erotismo est\u00e1 vivo y busca m\u00e1s profundidad', desc: 'Ya entiendes que el erotismo es m\u00e1s que sexo \u2014 es imaginaci\u00f3n, riesgo, misterio. Tu siguiente paso: llevar esa curiosidad al siguiente nivel. \u00bfQu\u00e9 riesgo emocional puedes tomar esta semana con alguien que amas?' },
-    { type: 'Llama Viva', title: 'Tu erotismo es una fuerza vital activa', desc: 'El juego, el humor y la curiosidad son parte de c\u00f3mo vives tus relaciones. Entiendes la "figura ocho" \u2014 que lo que t\u00fa haces afecta lo que el otro hace. Tu camino: compartir esta sabidur\u00eda y seguir profundizando.' }
-  ];
-
-  const typeIdx = answers.reduce((a, b) => a + b, 0) % types.length;
-  const t = types[typeIdx];
-  document.getElementById('resultType').textContent = t.type;
-  document.getElementById('resultTitle').textContent = t.title;
-  document.getElementById('resultDesc').textContent = t.desc;
-}
-
-renderQuiz();
-
-/* ─── GIFT SHOP ─── */
-const GIFTS = [
-  { name: 'Experiencia de Masaje en Pareja', desc: 'Un d\u00eda lujoso de spa para dos con aromaterapia y suite privada.', price: '$189 - $450', emoji: '\ud83d\udc86', cat: 'experience', tag: 'Popular' },
-  { name: 'Kit de Carta de Amor Escrita a Mano', desc: 'Set premium de papeler\u00eda con sello de cera, pluma de caligraf\u00eda y prompts guiados.', price: '$65', emoji: '\ud83d\udc8c', cat: 'romantic', tag: '' },
-  { name: 'Manta de Cachemira Italiana', desc: 'Cachemira ultra-suave en tonos neutros c\u00e1lidos. Perfecta para tardes acogedoras.', price: '$295', emoji: '\ud83e\udde3', cat: 'home', tag: 'Lujo' },
-  { name: 'Vino A\u00f1ejo & Diario de Reflexi\u00f3n', desc: 'Bordeaux a\u00f1ejado junto con un diario de reflexi\u00f3n encuadernado en cuero.', price: '$145', emoji: '\ud83c\udf77', cat: 'romantic', tag: '' },
-  { name: 'Escapada de Fin de Semana', desc: 'Estad\u00eda en hotel boutique con cena reservada. Elige tu destino.', price: '$400 - $800', emoji: '\u2708\ufe0f', cat: 'experience', tag: 'Premium' },
-  { name: 'Set de Aromaterapia con Difusor', desc: 'Difusor de cer\u00e1mica artesanal con 6 mezclas de aceites esenciales.', price: '$89', emoji: '\ud83d\udd6f\ufe0f', cat: 'self-care', tag: '' },
-  { name: 'Bata de Seda & Antifaz', desc: 'Bata de seda de morera con antifaz a juego en champagne o azul noche.', price: '$175', emoji: '\ud83d\udc58', cat: 'self-care', tag: 'M\u00e1s Vendido' },
-  { name: 'Noche de Estrellas Privada', desc: 'Sesi\u00f3n privada con telescopio y gu\u00eda. Constelaciones, champagne, mantas.', price: '$220', emoji: '\ud83d\udd2d', cat: 'experience', tag: '' },
-  { name: 'Colecci\u00f3n de Chocolates Artesanales', desc: '24 trufas del maestro chocolatero. Cacao de origen \u00fanico.', price: '$85', emoji: '\ud83c\udf6b', cat: 'romantic', tag: '' },
-  { name: 'Set de Coj\u00edn de Meditaci\u00f3n', desc: 'Zafu y zabut\u00f3n de trigo sarraceno org\u00e1nico en tonos tierra.', price: '$120', emoji: '\ud83e\uddd8', cat: 'self-care', tag: '' },
-  { name: 'Mapa Estelar Personalizado', desc: 'Impresi\u00f3n del cielo nocturno en la fecha que se conocieron. Marco de museo.', price: '$95', emoji: '\u2b50', cat: 'romantic', tag: 'Popular' },
-  { name: 'Tr\u00edo de Velas de Lujo', desc: 'Velas de soya artesanales: Chimenea, Jard\u00edn de Medianoche, Ma\u00f1ana de Domingo.', price: '$78', emoji: '\ud83d\udd6f\ufe0f', cat: 'home', tag: '' },
-];
-
-function renderGifts(filter = 'all') {
-  const grid = document.getElementById('shopGrid');
-  const filtered = filter === 'all' ? GIFTS : GIFTS.filter(g => g.cat === filter);
-  grid.innerHTML = filtered.map(g => `
-    <div class="gift-card" onclick="alert('Affiliate link coming soon!')">
-      <div class="gift-img">
-        <span class="gift-emoji">${g.emoji}</span>
-        ${g.tag ? `<span class="gift-tag">${g.tag}</span>` : ''}
-      </div>
-      <div class="gift-body">
-        <h4>${g.name}</h4>
-        <p>${g.desc}</p>
-        <div class="gift-footer">
-          <span class="gift-price">${g.price}</span>
-          <span class="gift-link">Comprar &#8594;</span>
-        </div>
-      </div>
-    </div>
-  `).join('');
-}
-function filterGifts(cat, btn) {
-  document.querySelectorAll('.shop-cat').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  renderGifts(cat);
-}
-renderGifts();
-
-/* ─── EMAIL SIGNUP ─── */
-function handleEmailSignup() {
-  const email = document.getElementById('emailInput').value.trim();
-  if (!email || !email.includes('@')) { alert('Por favor ingresa un email v\u00e1lido.'); return; }
-  alert(`\u00a1Gracias! Recibir\u00e1s tu primera reflexi\u00f3n diaria ma\u00f1ana por la ma\u00f1ana en ${email}`);
-  document.getElementById('emailInput').value = '';
-}
-function handleQuizEmail() {
-  const email = document.getElementById('quizEmail').value.trim();
-  if (!email || !email.includes('@')) { alert('Por favor ingresa un email v\u00e1lido.'); return; }
-  alert(`Tu an\u00e1lisis detallado de inteligencia er\u00f3tica ser\u00e1 enviado a ${email}`);
-  document.getElementById('quizEmail').value = '';
-}
-
-/* ─── SCROLL ANIMATIONS ─── */
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.1 });
-
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+document.getElementById('shopGrid').innerHTML=GIFTS.map(g=>`<div class="pcard"><div class="pimg" style="background:${g.bg}"><span class="pe">${g.e}</span>${g.tag?`<span class="ptag">${g.tag}</span>`:''}</div><div class="pbody"><h4>${g.n}</h4><p>${g.d}</p><div class="pfoot"><span class="pprice">${g.p}</span><span class="plink">Comprar &#8594;</span></div></div></div>`).join('');
 </script>
 </body>
 </html>
