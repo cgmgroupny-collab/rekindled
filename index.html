@@ -176,13 +176,12 @@ body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;b
     <a href="#" onclick="goTo(3)" data-s="3">Gifts</a>
     <a href="#" onclick="goTo(4)" data-s="4">Sessions</a>
     <a href="#" onclick="goTo(5)" data-s="5">Reflect</a>
-    <a href="pricing.html">Pricing</a>
     <a href="#" onclick="goTo(3)" data-s="3">Store</a>
     <a href="brand-board.html">Brand</a>
     <a href="es.html" class="lang-sw">ES</a>
   </div>
   <div style="display:flex;align-items:center;gap:12px">
-    <a href="pricing.html" class="nav-cta">See Pricing</a>
+    <a href="pricing.html" class="nav-cta" style="display:flex;align-items:center;gap:6px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>Get Started</a>
     <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')" style="display:none;background:none;border:1px solid var(--faint);border-radius:6px;padding:6px 8px;cursor:pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--cream)" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
   </div>
 </nav>
@@ -204,7 +203,7 @@ body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;b
       <p class="hero-sub">She who is alive. Your guide to deeper relationships, erotic intelligence, and the courage to let go &mdash; inspired by Esther Perel &amp; Melody Beattie.</p>
       <div class="hero-actions">
         <button class="btn btn-r" onclick="goTo(2)">How's Your Eroticism?</button>
-        <a href="pricing.html" class="btn btn-g">View Pricing</a>
+        <button class="btn btn-g" onclick="goTo(3)" style="gap:8px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>Shop Gifts</button>
       </div>
     </div>
   </div>
