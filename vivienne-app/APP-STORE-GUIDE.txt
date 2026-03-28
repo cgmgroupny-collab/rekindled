@@ -1,0 +1,151 @@
+═══════════════════════════════════════════════════════════════
+  VIVIENNE — App Store Publishing Guide
+  Step-by-step to get on the Apple App Store
+═══════════════════════════════════════════════════════════════
+
+COST: $99/year Apple Developer account
+TIME: 1-3 days for Apple review
+
+═══════════════════════════════════════════════════════════════
+  STEP 1: Apple Developer Account ($99/year)
+═══════════════════════════════════════════════════════════════
+
+1. Go to https://developer.apple.com/programs/enroll/
+2. Sign in with your Apple ID (or create one)
+3. Pay $99/year enrollment fee
+4. Wait 24-48 hours for approval
+
+═══════════════════════════════════════════════════════════════
+  STEP 2: Install EAS CLI (Expo Application Services)
+═══════════════════════════════════════════════════════════════
+
+Run in terminal:
+  npm install -g eas-cli
+  eas login        (create free Expo account if needed)
+  eas build:configure
+
+═══════════════════════════════════════════════════════════════
+  STEP 3: Build for iOS
+═══════════════════════════════════════════════════════════════
+
+Run:
+  eas build --platform ios --profile production
+
+This creates an .ipa file uploaded to Expo's servers.
+Takes ~15-20 minutes. You'll get a URL to download.
+
+═══════════════════════════════════════════════════════════════
+  STEP 4: Submit to App Store
+═══════════════════════════════════════════════════════════════
+
+Run:
+  eas submit --platform ios
+
+OR manually:
+1. Download .ipa from Expo build
+2. Open Transporter app (free from Mac App Store)
+3. Drag .ipa into Transporter
+4. Click "Deliver"
+
+═══════════════════════════════════════════════════════════════
+  STEP 5: App Store Connect Setup
+═══════════════════════════════════════════════════════════════
+
+Go to https://appstoreconnect.apple.com
+
+Fill in:
+  App Name: Vivienne
+  Subtitle: Relationship Wisdom & Gift Guide
+  Category: Lifestyle
+  Secondary: Health & Fitness
+  Price: Free (with in-app purchases)
+
+  Description:
+  "Vivienne is your AI relationship companion. Get daily
+  wisdom inspired by Esther Perel and Melody Beattie, discover
+  perfect gifts for your partner, plan romantic getaways, and
+  book private coaching sessions. Take the erotic intelligence
+  quiz to understand your relationship patterns."
+
+  Keywords:
+  relationship,couples,gifts,dating,love,advice,erotic,
+  intelligence,coaching,wellness,self-help,journal,getaway
+
+  Privacy URL: https://rekindled-app.vercel.app
+  Support URL: https://rekindled-app.vercel.app
+
+═══════════════════════════════════════════════════════════════
+  STEP 6: Screenshots Required
+═══════════════════════════════════════════════════════════════
+
+Need screenshots for:
+  - iPhone 6.7" (1290 x 2796) — iPhone 15 Pro Max
+  - iPhone 6.5" (1284 x 2778) — iPhone 14 Plus
+  - iPad 12.9" (2048 x 2732) — if supporting iPad
+
+Take 5-8 screenshots showing:
+  1. Home screen with daily reflection
+  2. Gift shop with products
+  3. Getaway trips
+  4. Sessions booking page
+  5. Profile / Partner setup
+
+Use the Expo Go app on your phone to take real screenshots.
+
+═══════════════════════════════════════════════════════════════
+  STEP 7: In-App Purchases Setup
+═══════════════════════════════════════════════════════════════
+
+In App Store Connect > In-App Purchases:
+
+1. Auto-Renewable Subscription:
+   - "Vivienne Premium" — $4.99/month
+   - "Vivienne Premium Annual" — $39.99/year
+
+2. Non-Consumable:
+   - "Inner Work Journal" — $14.99
+
+3. Non-Consumable:
+   - "Private Session" — $249
+
+NOTE: Apple takes 30% cut on first year, 15% after.
+Adjust pricing accordingly:
+  - $4.99 → you get $3.49
+  - $14.99 → you get $10.49
+  - $249 → you get $174.30
+
+═══════════════════════════════════════════════════════════════
+  STEP 8: Test Before Submitting
+═══════════════════════════════════════════════════════════════
+
+1. Install Expo Go on your iPhone
+2. Run: npx expo start
+3. Scan QR code with your phone camera
+4. Test ALL screens and features
+5. Fix any bugs
+
+═══════════════════════════════════════════════════════════════
+  QUICK COMMANDS CHEAT SHEET
+═══════════════════════════════════════════════════════════════
+
+  npx expo start              → Run dev server
+  npx expo start --ios        → Run in iOS simulator
+  eas build --platform ios    → Build for App Store
+  eas submit --platform ios   → Submit to App Store
+  eas update                  → Push OTA update (no rebuild)
+
+═══════════════════════════════════════════════════════════════
+  PRICING MODEL SUMMARY
+═══════════════════════════════════════════════════════════════
+
+  FREE:     Daily reflections, quiz, browse gifts
+  PREMIUM:  $4.99/mo ($39.99/yr) — AI advice, reminders,
+            gift suggestions, trip planner
+  JOURNAL:  $14.99 one-time — digital download
+  SESSION:  $249 one-time — 90min private coaching
+
+  Monthly revenue at 1,000 users (5% premium conversion):
+  50 premium × $3.49 (after Apple cut) = $174.50/mo
+  + Journal sales + Session bookings + Affiliate commissions
+
+  Break-even: ~30 premium subscribers covers $99 dev fee
