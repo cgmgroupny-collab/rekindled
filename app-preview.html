@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Vivienne App — Preview</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0F0D0C;--bg2:#171413;--s:#1E1B19;--s2:#252220;--rose:#C47A7A;--rl:#D99A9A;--gold:#C9A96E;--cream:#F5EDE0;--t:#F0EBE3;--t2:#B8AFA5;--m:#7A726A;--f:#4A443E;--bdr:rgba(201,169,110,.12)}
+html,body{height:100%;overflow:hidden}
+body{background:var(--bg);color:var(--t);font-family:-apple-system,system-ui,sans-serif;font-size:14px}
+
+.phone{width:390px;height:844px;margin:20px auto;border-radius:44px;border:3px solid #333;overflow:hidden;position:relative;background:var(--bg)}
+.screen{position:absolute;top:0;left:0;right:0;bottom:80px;overflow-y:auto;opacity:0;pointer-events:none;transition:opacity .3s}
+.screen.active{opacity:1;pointer-events:auto}
+.screen::-webkit-scrollbar{display:none}
+
+/* Tab Bar */
+.tabs{position:absolute;bottom:0;left:0;right:0;height:80px;background:var(--bg);border-top:1px solid rgba(255,255,255,.04);display:flex;padding-bottom:16px}
+.tab{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;cursor:pointer;color:var(--m);transition:color .2s}
+.tab.active{color:var(--rose)}
+.tab svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.tab span{font-size:10px;font-weight:600;letter-spacing:.5px}
+
+/* Common */
+.pad{padding:0 20px}
+.lbl{font-size:9px;font-weight:700;letter-spacing:2.5px;color:var(--gold);margin-bottom:12px}
+.hdr{padding:60px 20px 16px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:22px;font-weight:500;color:var(--cream)}
+.date{font-size:11px;color:var(--m);margin-top:2px}
+.notif{width:36px;height:36px;border-radius:18px;border:1px solid var(--f);display:flex;align-items:center;justify-content:center;cursor:pointer}
+
+/* Reflection Card */
+.refl{margin:0 20px 24px;background:var(--s);border-radius:20px;padding:24px;border:1px solid var(--bdr);position:relative;overflow:hidden}
+.refl::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--rose)}
+.refl-q{font-size:16px;font-style:italic;color:var(--cream);line-height:26px;margin:12px 0}
+.refl-a{font-size:11px;color:var(--m);margin-bottom:16px}
+.refl-p{background:var(--bg2);border-radius:12px;padding:14px;border-left:3px solid var(--gold)}
+.refl-p b{color:var(--gold);font-size:10px;display:block;margin-bottom:4px}
+.refl-p span{font-size:13px;color:var(--t2);line-height:20px}
+
+/* Actions */
+.acts{display:flex;gap:10px;padding:0 20px;margin-bottom:24px;overflow-x:auto}
+.act{min-width:90px;height:90px;border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;border:1px solid var(--bdr);cursor:pointer;flex-shrink:0}
+.act svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2}
+.act span{font-size:10px;font-weight:600;text-align:center;line-height:13px;color:var(--cream)}
+
+/* Date cards */
+.dcard{display:flex;align-items:center;padding:14px 20px;border-bottom:1px solid rgba(255,255,255,.03);gap:14px;cursor:pointer}
+.dcard-icon{width:38px;height:38px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:16px}
+.dcard-label{font-size:13px;font-weight:500;color:var(--cream)}
+.dcard-sub{font-size:11px;color:var(--m);margin-top:1px}
+.badge{background:rgba(196,122,122,.12);padding:2px 8px;border-radius:20px;font-size:10px;font-weight:700;color:var(--rose);margin-left:auto}
+
+/* Premium CTA */
+.prem{margin:24px 20px;background:var(--s);border-radius:20px;padding:24px;border:1px solid var(--rose)}
+.prem h3{font-size:18px;font-weight:600;color:var(--cream);margin-bottom:6px}
+.prem p{font-size:12px;color:var(--t2);line-height:18px;margin-bottom:14px}
+.prem .price{font-size:26px;font-weight:700;color:var(--rose)}
+.prem .save{font-size:11px;color:var(--gold);margin-top:2px;margin-bottom:16px}
+.btn-r{background:var(--rose);color:#fff;border:none;border-radius:100px;padding:14px;width:100%;font-size:13px;font-weight:700;cursor:pointer;letter-spacing:.5px}
+.btn-g{background:var(--gold);color:var(--bg);border:none;border-radius:100px;padding:12px 24px;font-size:12px;font-weight:700;cursor:pointer}
+
+/* Gift Cards */
+.gifts-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 20px}
+.gcard{background:var(--s);border-radius:14px;overflow:hidden;border:1px solid var(--bdr);cursor:pointer}
+.gcard-img{height:100px;background:var(--bg2);display:flex;align-items:center;justify-content:center;font-size:32px;position:relative}
+.gcard-tag{position:absolute;top:6px;right:6px;background:var(--gold);padding:2px 7px;border-radius:100px;font-size:7px;font-weight:800;color:var(--bg);letter-spacing:1px;text-transform:uppercase}
+.gcard-body{padding:12px}
+.gcard-name{font-size:12px;font-weight:600;color:var(--cream);margin-bottom:3px}
+.gcard-desc{font-size:10px;color:var(--m);line-height:14px;margin-bottom:8px}
+.gcard-foot{display:flex;justify-content:space-between;align-items:center}
+.gcard-price{font-size:13px;font-weight:700;color:var(--rose)}
+.gcard-buy{background:var(--rose);color:#fff;border:none;border-radius:100px;padding:5px 10px;font-size:9px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:3px}
+
+/* Search */
+.search{display:flex;align-items:center;gap:8px;margin:0 20px 12px;background:var(--s);border-radius:12px;padding:10px 14px;border:1px solid var(--bdr)}
+.search input{flex:1;background:none;border:none;color:var(--cream);font-size:13px;outline:none}
+.search input::placeholder{color:var(--m)}
+
+/* Cats */
+.cats{display:flex;gap:8px;padding:0 20px;margin-bottom:14px;overflow-x:auto}
+.cat{padding:7px 16px;border-radius:100px;border:1px solid var(--f);font-size:11px;font-weight:600;color:var(--m);cursor:pointer;white-space:nowrap}
+.cat.active{border-color:var(--rose);color:var(--rose);background:rgba(196,122,122,.1)}
+
+/* Trips */
+.tcard{display:flex;margin:0 20px 10px;background:var(--s);border-radius:14px;overflow:hidden;border:1px solid var(--bdr);cursor:pointer}
+.tcard-left{width:70px;display:flex;align-items:center;justify-content:center;background:var(--bg2);font-size:28px}
+.tcard-body{flex:1;padding:14px}
+.tcard-name{font-size:14px;font-weight:600;color:var(--cream);margin-bottom:2px}
+.tcard-loc{font-size:10px;color:var(--gold);margin-bottom:4px}
+.tcard-desc{font-size:11px;color:var(--m);line-height:16px;margin-bottom:10px}
+.tcard-foot{display:flex;justify-content:space-between;align-items:center}
+.tcard-price{font-size:15px;font-weight:700;color:var(--rose)}
+
+/* Session */
+.sess{margin:0 20px 24px;background:var(--s);border-radius:20px;padding:28px;text-align:center;border:1px solid var(--rose)}
+.sess .price{font-size:44px;font-weight:600;color:var(--cream)}
+.sess .per{font-size:11px;color:var(--m);letter-spacing:1px;text-transform:uppercase;margin-bottom:10px}
+.sess .dur{font-size:12px;color:var(--t2);margin-bottom:20px}
+.feat{display:flex;align-items:flex-start;gap:12px;padding:12px 20px;border-bottom:1px solid rgba(255,255,255,.03)}
+.feat-icon{width:36px;height:36px;border-radius:18px;background:rgba(201,169,110,.08);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.feat h5{font-size:13px;font-weight:600;color:var(--cream)}
+.feat p{font-size:11px;color:var(--m);margin-top:1px}
+
+/* Profile */
+.avatar{width:72px;height:72px;border-radius:36px;background:var(--s);border:2px solid var(--bdr);display:flex;align-items:center;justify-content:center;margin:0 auto 8px;font-size:28px;color:var(--m)}
+.edit-photo{text-align:center;font-size:11px;font-weight:600;color:var(--gold);margin-bottom:24px;cursor:pointer}
+.pcard{margin:0 20px 16px;background:var(--s);border-radius:14px;padding:16px;border:1px solid var(--bdr)}
+.field{margin-bottom:14px}
+.field-label{font-size:10px;font-weight:600;color:var(--m);margin-bottom:5px;letter-spacing:.5px}
+.field-input{width:100%;background:var(--bg2);border:1px solid var(--f);border-radius:10px;padding:10px 12px;color:var(--cream);font-size:13px}
+.setting{display:flex;align-items:center;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.03)}
+.setting-info{flex:1}
+.setting-info h5{font-size:13px;font-weight:500;color:var(--cream)}
+.setting-info p{font-size:10px;color:var(--m);margin-top:1px}
+.toggle{width:44px;height:24px;border-radius:12px;background:var(--rose);position:relative;cursor:pointer}
+.toggle::after{content:'';width:20px;height:20px;border-radius:10px;background:#fff;position:absolute;top:2px;right:2px}
+.link-row{display:flex;justify-content:space-between;align-items:center;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.03);cursor:pointer}
+.link-row span{font-size:13px;color:var(--t2)}
+
+/* No-print */
+.preview-label{text-align:center;padding:8px;background:#222;color:#888;font-size:11px;font-family:monospace}
+</style>
+</head>
+<body>
+
+<div class="preview-label">Vivienne App Preview — iPhone 15 Pro</div>
+
+<div class="phone">
+
+  <!-- HOME -->
+  <div class="screen active" id="screen-home">
+    <div class="hdr">
+      <div><div class="logo">✿ Vivienne</div><div class="date" id="dateStr"></div></div>
+      <div class="notif">🔔</div>
+    </div>
+    <div class="refl">
+      <div class="lbl">TODAY'S REFLECTION</div>
+      <div class="refl-q">"Humor and play is possibility. Possibility invites change. Change invites healing."</div>
+      <div class="refl-a">— Esther Perel</div>
+      <div class="refl-p"><b>Vivienne asks:</b><span>When did you last truly play with a loved one? Plan one playful moment today.</span></div>
+    </div>
+    <div class="lbl pad">QUICK ACTIONS</div>
+    <div class="acts">
+      <div class="act" style="background:rgba(196,122,122,.08)" onclick="showTab(1)">
+        <svg viewBox="0 0 24 24" style="color:var(--rose)"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <span>How's Your<br>Eroticism?</span>
+      </div>
+      <div class="act" style="background:rgba(201,169,110,.08)" onclick="showTab(1)">
+        <svg viewBox="0 0 24 24" style="color:var(--gold)"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+        <span>Find a<br>Gift</span>
+      </div>
+      <div class="act" style="background:rgba(196,122,122,.08)" onclick="showTab(2)">
+        <svg viewBox="0 0 24 24" style="color:var(--rose)"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.4-.1.9.3 1.1l5.4 3.2-2.8 2.8L4 14c-.3 0-.6.1-.8.4l-.2.3c-.2.3-.1.8.2 1l3.3 2.3 2.3 3.3c.2.3.7.4 1 .2l.3-.2c.3-.2.4-.5.4-.8l-.2-2.3 2.8-2.8 3.2 5.4c.2.4.7.5 1.1.3l.5-.3c.4-.2.6-.6.5-1.1z"/></svg>
+        <span>Plan a<br>Getaway</span>
+      </div>
+      <div class="act" style="background:rgba(201,169,110,.08)" onclick="showTab(3)">
+        <svg viewBox="0 0 24 24" style="color:var(--gold)"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        <span>Inner Work<br>Journal</span>
+      </div>
+    </div>
+    <div class="lbl pad">IMPORTANT DATES</div>
+    <div class="dcard"><div class="dcard-icon" style="background:rgba(196,122,122,.12)">❤️</div><div style="flex:1"><div class="dcard-label">Valentine's Day</div><div class="dcard-sub">Feb 14</div></div><div class="badge">323d</div></div>
+    <div class="dcard"><div class="dcard-icon" style="background:rgba(201,169,110,.08)">📅</div><div style="flex:1"><div class="dcard-label">Your Anniversary</div><div class="dcard-sub">Set date →</div></div></div>
+    <div class="dcard"><div class="dcard-icon" style="background:rgba(201,169,110,.08)">🎁</div><div style="flex:1"><div class="dcard-label">Partner's Birthday</div><div class="dcard-sub">Set date →</div></div></div>
+    <div class="prem">
+      <h3>Unlock Vivienne Premium</h3>
+      <p>AI gift suggestions, trip planning, date reminders & unlimited relationship advice</p>
+      <div class="price">$4.99/mo</div>
+      <div class="save">or $39.99/year (save 33%)</div>
+      <button class="btn-r">Start Free Trial</button>
+    </div>
+    <div style="height:20px"></div>
+  </div>
+
+  <!-- GIFTS -->
+  <div class="screen" id="screen-gifts">
+    <div class="hdr"><div><div class="logo">✿ Gift Shop</div><div class="date">Curated by Vivienne</div></div></div>
+    <div class="search"><span>🔍</span><input type="text" placeholder="Search gifts..."></div>
+    <div class="cats"><div class="cat active">All</div><div class="cat">Romantic</div><div class="cat">Self-Care</div><div class="cat">Experience</div><div class="cat">Home</div></div>
+    <div class="gifts-grid">
+      <div class="gcard"><div class="gcard-img">💆<div class="gcard-tag">Popular</div></div><div class="gcard-body"><div class="gcard-name">Couples Massage</div><div class="gcard-desc">Spa day for two</div><div class="gcard-foot"><span class="gcard-price">$189</span><button class="gcard-buy">🛒 Buy</button></div></div></div>
+      <div class="gcard"><div class="gcard-img">👘<div class="gcard-tag">Bestseller</div></div><div class="gcard-body"><div class="gcard-name">Silk Robe & Mask</div><div class="gcard-desc">Mulberry silk</div><div class="gcard-foot"><span class="gcard-price">$175</span><button class="gcard-buy">🛒 Buy</button></div></div></div>
+      <div class="gcard"><div class="gcard-img">⭐<div class="gcard-tag">Popular</div></div><div class="gcard-body"><div class="gcard-name">Star Map</div><div class="gcard-desc">Night sky when you met</div><div class="gcard-foot"><span class="gcard-price">$95</span><button class="gcard-buy">🛒 Buy</button></div></div></div>
+      <div class="gcard"><div class="gcard-img">✈️<div class="gcard-tag">Premium</div></div><div class="gcard-body"><div class="gcard-name">Weekend Getaway</div><div class="gcard-desc">Hotel + dinner</div><div class="gcard-foot"><span class="gcard-price">$400</span><button class="gcard-buy">🛒 Buy</button></div></div></div>
+      <div class="gcard"><div class="gcard-img">🍫</div><div class="gcard-body"><div class="gcard-name">Artisan Chocolates</div><div class="gcard-desc">24 truffles</div><div class="gcard-foot"><span class="gcard-price">$85</span><button class="gcard-buy">🛒 Buy</button></div></div></div>
+      <div class="gcard"><div class="gcard-img">🕯️</div><div class="gcard-body"><div class="gcard-name">Candle Trio</div><div class="gcard-desc">Hand-poured soy</div><div class="gcard-foot"><span class="gcard-price">$78</span><button class="gcard-buy">🛒 Buy</button></div></div></div>
+      <div class="gcard"><div class="gcard-img">💌</div><div class="gcard-body"><div class="gcard-name">Love Letter Kit</div><div class="gcard-desc">Wax seal + prompts</div><div class="gcard-foot"><span class="gcard-price">$65</span><button class="gcard-buy">🛒 Buy</button></div></div></div>
+      <div class="gcard"><div class="gcard-img">🧣<div class="gcard-tag">Luxury</div></div><div class="gcard-body"><div class="gcard-name">Cashmere Blanket</div><div class="gcard-desc">Italian cashmere</div><div class="gcard-foot"><span class="gcard-price">$295</span><button class="gcard-buy">🛒 Buy</button></div></div></div>
+    </div>
+    <div style="height:20px"></div>
+  </div>
+
+  <!-- TRIPS -->
+  <div class="screen" id="screen-trips">
+    <div class="hdr"><div><div class="logo">✿ Getaways</div><div class="date">Couples trips by Vivienne</div></div></div>
+    <div class="tcard"><div class="tcard-left">🍷</div><div class="tcard-body"><div class="tcard-name">Napa Valley Wine Weekend</div><div class="tcard-loc">California · 2 nights</div><div class="tcard-desc">Wine tasting, vineyard tours, spa, fine dining.</div><div class="tcard-foot"><span class="tcard-price">$450–$800</span><button class="btn-g" style="font-size:10px;padding:6px 14px">Explore →</button></div></div></div>
+    <div class="tcard"><div class="tcard-left">🏜️</div><div class="tcard-body"><div class="tcard-name">Sedona Desert Retreat</div><div class="tcard-loc">Arizona · 2 nights</div><div class="tcard-desc">Red rock hiking, couples spa, stargazing.</div><div class="tcard-foot"><span class="tcard-price">$350–$600</span><button class="btn-g" style="font-size:10px;padding:6px 14px">Explore →</button></div></div></div>
+    <div class="tcard"><div class="tcard-left">🌅</div><div class="tcard-body"><div class="tcard-name">Santorini Sunset Package</div><div class="tcard-loc">Greece · 5 nights</div><div class="tcard-desc">Cliffside suite, private cruise, wine tasting.</div><div class="tcard-foot"><span class="tcard-price">$1,200–$2,500</span><button class="btn-g" style="font-size:10px;padding:6px 14px">Explore →</button></div></div></div>
+    <div class="tcard"><div class="tcard-left">🏖️</div><div class="tcard-body"><div class="tcard-name">Tulum Beach Retreat</div><div class="tcard-loc">Mexico · 4 nights</div><div class="tcard-desc">Beachfront bungalow, cenote, mayan ruins.</div><div class="tcard-foot"><span class="tcard-price">$600–$1,200</span><button class="btn-g" style="font-size:10px;padding:6px 14px">Explore →</button></div></div></div>
+    <div class="tcard"><div class="tcard-left">🏔️</div><div class="tcard-body"><div class="tcard-name">Vermont Cabin Getaway</div><div class="tcard-loc">New England · 2 nights</div><div class="tcard-desc">Cozy cabin, fireplace, hiking, brewery tour.</div><div class="tcard-foot"><span class="tcard-price">$250–$450</span><button class="btn-g" style="font-size:10px;padding:6px 14px">Explore →</button></div></div></div>
+    <div style="height:20px"></div>
+  </div>
+
+  <!-- SESSIONS -->
+  <div class="screen" id="screen-sessions">
+    <div class="hdr"><div><div class="logo">✿ Sessions</div><div class="date">One-on-one with Vivienne</div></div></div>
+    <div class="sess">
+      <div class="price">$249</div>
+      <div class="per">per session</div>
+      <div class="dur">⏰ 90 min · Zoom or Phone</div>
+      <button class="btn-r">Book Your Session</button>
+      <div style="font-size:10px;color:var(--m);margin-top:10px">Limited availability</div>
+    </div>
+    <div class="lbl pad">WHAT'S INCLUDED</div>
+    <div class="feat"><div class="feat-icon">💬</div><div><h5>Deep Relationship Audit</h5><p>Understand your patterns</p></div></div>
+    <div class="feat"><div class="feat-icon">💡</div><div><h5>Personalized Action Plan</h5><p>Steps you start today</p></div></div>
+    <div class="feat"><div class="feat-icon">📖</div><div><h5>Follow-Up Resources</h5><p>Reading, exercises & reflections</p></div></div>
+    <div class="feat"><div class="feat-icon">🔒</div><div><h5>Completely Confidential</h5><p>Judgment-free zone</p></div></div>
+    <div class="feat"><div class="feat-icon">📧</div><div><h5>7-Day Email Follow-Up</h5><p>Ongoing support after session</p></div></div>
+    <div class="feat"><div class="feat-icon">🎁</div><div><h5>Free Card Deck Included</h5><p>$29.99 value</p></div></div>
+    <div style="height:20px"></div>
+  </div>
+
+  <!-- PROFILE -->
+  <div class="screen" id="screen-profile">
+    <div class="hdr"><div><div class="logo">✿ Profile</div></div></div>
+    <div class="avatar">👤</div>
+    <div class="edit-photo">Edit Photo</div>
+    <div class="lbl pad">PARTNER DETAILS</div>
+    <div class="pcard">
+      <div class="field"><div class="field-label">Partner's Name</div><input class="field-input" placeholder="Enter name..."></div>
+      <div class="field"><div class="field-label">Anniversary Date</div><input class="field-input" placeholder="📅 Set date..."></div>
+      <div class="field"><div class="field-label">Partner's Birthday</div><input class="field-input" placeholder="🎁 Set date..."></div>
+      <div class="field"><div class="field-label">Location</div><input class="field-input" placeholder="📍 For local gift search..."></div>
+    </div>
+    <div class="lbl pad">PREFERENCES</div>
+    <div class="pcard">
+      <div class="setting"><div class="setting-info"><h5>Date Reminders</h5><p>Notified before important dates</p></div><div class="toggle"></div></div>
+      <div class="setting"><div class="setting-info"><h5>Daily Reflections</h5><p>Morning wisdom from Vivienne</p></div><div class="toggle"></div></div>
+    </div>
+    <div class="lbl pad">YOUR EROTICISM TYPE</div>
+    <div class="pcard" style="text-align:center;border-color:var(--rose)">
+      <div style="font-size:28px;margin-bottom:8px">🔥</div>
+      <div style="font-size:16px;font-weight:600;color:var(--cream);margin-bottom:4px">Take the Quiz</div>
+      <div style="font-size:11px;color:var(--t2);margin-bottom:14px">Discover your erotic intelligence pattern</div>
+      <button class="btn-r" style="width:auto;padding:10px 28px;display:inline-block">Start Quiz</button>
+    </div>
+    <div class="lbl pad" style="margin-top:8px">SUBSCRIPTION</div>
+    <div class="pcard">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+        <span style="font-size:13px;color:var(--cream)">Current Plan</span>
+        <span style="background:rgba(201,169,110,.12);padding:2px 8px;border-radius:100px;font-size:9px;font-weight:800;color:var(--gold);letter-spacing:1px">FREE</span>
+      </div>
+      <button class="btn-r">Upgrade to Premium — $4.99/mo</button>
+    </div>
+    <div style="height:20px"></div>
+  </div>
+
+  <!-- TAB BAR -->
+  <div class="tabs">
+    <div class="tab active" onclick="showTab(0)">
+      <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      <span>Home</span>
+    </div>
+    <div class="tab" onclick="showTab(1)">
+      <svg viewBox="0 0 24 24"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+      <span>Gifts</span>
+    </div>
+    <div class="tab" onclick="showTab(2)">
+      <svg viewBox="0 0 24 24"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.4-.1.9.3 1.1l5.4 3.2-2.8 2.8L4 14c-.3 0-.6.1-.8.4l-.2.3c-.2.3-.1.8.2 1l3.3 2.3 2.3 3.3c.2.3.7.4 1 .2l.3-.2c.3-.2.4-.5.4-.8l-.2-2.3 2.8-2.8 3.2 5.4c.2.4.7.5 1.1.3l.5-.3c.4-.2.6-.6.5-1.1z"/></svg>
+      <span>Getaways</span>
+    </div>
+    <div class="tab" onclick="showTab(3)">
+      <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      <span>Sessions</span>
+    </div>
+    <div class="tab" onclick="showTab(4)">
+      <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span>Profile</span>
+    </div>
+  </div>
+</div>
+
+<script>
+const screens = ['home','gifts','trips','sessions','profile'];
+const tabs = document.querySelectorAll('.tab');
+function showTab(i) {
+  screens.forEach((s,j) => {
+    document.getElementById('screen-'+s).classList.toggle('active', j===i);
+    tabs[j].classList.toggle('active', j===i);
+  });
+}
+const d = new Date();
+document.getElementById('dateStr').textContent = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][d.getDay()] + ', ' + ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][d.getMonth()] + ' ' + d.getDate();
+</script>
+</body>
+</html>
